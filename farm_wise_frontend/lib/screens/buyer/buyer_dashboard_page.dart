@@ -263,7 +263,7 @@ class _BuyerDashboardPageState extends State<BuyerDashboardPage> {
                                 // Text(
                                 //   "2023 Q2",
                                 //   style: TextStyle(
-                                //     fontSize: 18,
+                                //     fontSize: 16,
                                 //   ),
                                 // ),
                                 const SizedBox(
@@ -388,7 +388,7 @@ class _BuyerDashboardPageState extends State<BuyerDashboardPage> {
                                           const Text(
                                             "Total placed",
                                             style: TextStyle(
-                                              fontSize: 18,
+                                              fontSize: 16,
                                               fontWeight: FontWeight.w500,
                                             ),
                                           ),
@@ -398,7 +398,7 @@ class _BuyerDashboardPageState extends State<BuyerDashboardPage> {
                                           Text(
                                             "$totalOrders",
                                             style: const TextStyle(
-                                              fontSize: 18,
+                                              fontSize: 16,
                                             ),
                                           ),
                                         ],
@@ -408,7 +408,7 @@ class _BuyerDashboardPageState extends State<BuyerDashboardPage> {
                                           const Text(
                                             "Accepted",
                                             style: TextStyle(
-                                              fontSize: 18,
+                                              fontSize: 16,
                                               fontWeight: FontWeight.w500,
                                             ),
                                           ),
@@ -418,7 +418,7 @@ class _BuyerDashboardPageState extends State<BuyerDashboardPage> {
                                           Text(
                                             "$acceptedOrders",
                                             style: const TextStyle(
-                                              fontSize: 18,
+                                              fontSize: 16,
                                             ),
                                           ),
                                         ],
@@ -428,7 +428,7 @@ class _BuyerDashboardPageState extends State<BuyerDashboardPage> {
                                           const Text(
                                             "Rejected",
                                             style: TextStyle(
-                                              fontSize: 18,
+                                              fontSize: 16,
                                               fontWeight: FontWeight.w500,
                                             ),
                                           ),
@@ -438,7 +438,7 @@ class _BuyerDashboardPageState extends State<BuyerDashboardPage> {
                                           Text(
                                             "$rejectedOrders",
                                             style: const TextStyle(
-                                              fontSize: 18,
+                                              fontSize: 16,
                                             ),
                                           ),
                                         ],
@@ -474,7 +474,7 @@ class _BuyerDashboardPageState extends State<BuyerDashboardPage> {
                                           const Text(
                                             "Pending",
                                             style: TextStyle(
-                                              fontSize: 18,
+                                              fontSize: 16,
                                               fontWeight: FontWeight.w500,
                                             ),
                                           ),
@@ -484,7 +484,7 @@ class _BuyerDashboardPageState extends State<BuyerDashboardPage> {
                                           Text(
                                             "$pendingOrders",
                                             style: const TextStyle(
-                                              fontSize: 18,
+                                              fontSize: 16,
                                             ),
                                           ),
                                         ],
@@ -494,7 +494,7 @@ class _BuyerDashboardPageState extends State<BuyerDashboardPage> {
                                           const Text(
                                             "Active",
                                             style: TextStyle(
-                                              fontSize: 18,
+                                              fontSize: 16,
                                               fontWeight: FontWeight.w500,
                                             ),
                                           ),
@@ -504,7 +504,7 @@ class _BuyerDashboardPageState extends State<BuyerDashboardPage> {
                                           Text(
                                             "$activeOrders",
                                             style: const TextStyle(
-                                              fontSize: 18,
+                                              fontSize: 16,
                                             ),
                                           ),
                                         ],
@@ -514,7 +514,7 @@ class _BuyerDashboardPageState extends State<BuyerDashboardPage> {
                                           const Text(
                                             "Flagged",
                                             style: TextStyle(
-                                              fontSize: 18,
+                                              fontSize: 16,
                                               fontWeight: FontWeight.w500,
                                             ),
                                           ),
@@ -524,7 +524,7 @@ class _BuyerDashboardPageState extends State<BuyerDashboardPage> {
                                           Text(
                                             "$flagedOrders",
                                             style: const TextStyle(
-                                              fontSize: 18,
+                                              fontSize: 16,
                                             ),
                                           ),
                                         ],
@@ -542,14 +542,14 @@ class _BuyerDashboardPageState extends State<BuyerDashboardPage> {
                                       const Text(
                                         "Waiting for seller approval to close:  ",
                                         style: TextStyle(
-                                          fontSize: 18,
+                                          fontSize: 16,
                                           fontWeight: FontWeight.w500,
                                         ),
                                       ),
                                       Text(
                                         "$flagWaitingSellerApprovalOrders",
                                         style: const TextStyle(
-                                          fontSize: 18,
+                                          fontSize: 16,
                                         ),
                                       ),
                                     ],
@@ -580,7 +580,7 @@ class _BuyerDashboardPageState extends State<BuyerDashboardPage> {
                                   Text(
                                     "Top Products you may be intersted in",
                                     style: TextStyle(
-                                      fontSize: 20,
+                                      fontSize: 18,
                                       fontWeight: FontWeight.w500,
                                     ),
                                   ),
@@ -609,7 +609,7 @@ class _BuyerDashboardPageState extends State<BuyerDashboardPage> {
                                               "No top bought products yet.",
                                               textAlign: TextAlign.center,
                                               style: TextStyle(
-                                                fontSize: 17,
+                                                fontSize: 15,
                                               ),
                                             ),
                                           ),
@@ -658,7 +658,7 @@ class _BuyerDashboardPageState extends State<BuyerDashboardPage> {
                                                     "${index + 1}",
                                                     textAlign: TextAlign.center,
                                                     style: const TextStyle(
-                                                      fontSize: 20,
+                                                      fontSize: 18,
                                                       fontWeight:
                                                           FontWeight.w500,
                                                       color: Colors.white,
@@ -749,7 +749,7 @@ class _BuyerDashboardPageState extends State<BuyerDashboardPage> {
                                                                     .productName,
                                                                 style:
                                                                     const TextStyle(
-                                                                  fontSize: 18,
+                                                                  fontSize: 16,
                                                                 ),
                                                               ),
                                                               const SizedBox(
@@ -759,7 +759,7 @@ class _BuyerDashboardPageState extends State<BuyerDashboardPage> {
                                                                 "Price : ${_topProductsBoughtList[index].basePrice}/${_topProductsBoughtList[index].quantityUnit}",
                                                                 style:
                                                                     const TextStyle(
-                                                                  fontSize: 18,
+                                                                  fontSize: 16,
                                                                 ),
                                                               ),
                                                               const SizedBox(
@@ -769,7 +769,7 @@ class _BuyerDashboardPageState extends State<BuyerDashboardPage> {
                                                                 "Total sales : Rs.${_topProductsBoughtList[index].topProductsBoughtSales}",
                                                                 style:
                                                                     const TextStyle(
-                                                                  fontSize: 18,
+                                                                  fontSize: 16,
                                                                 ),
                                                               ),
                                                             ],
@@ -833,7 +833,7 @@ class _BuyerDashboardPageState extends State<BuyerDashboardPage> {
                                   Text(
                                     "Recent Placed Orders",
                                     style: TextStyle(
-                                        fontSize: 20,
+                                        fontSize: 18,
                                         fontWeight: FontWeight.w500),
                                   ),
                                 ],
@@ -858,7 +858,7 @@ class _BuyerDashboardPageState extends State<BuyerDashboardPage> {
                                               "No new recent orders",
                                               textAlign: TextAlign.center,
                                               style: TextStyle(
-                                                fontSize: 17,
+                                                fontSize: 15,
                                               ),
                                             ),
                                           ),
@@ -1043,27 +1043,27 @@ class _BuyerDashboardPageState extends State<BuyerDashboardPage> {
                                                               "${_recentPlacedOrders[index].productName} @ ${_recentPlacedOrders[index].dealPrice}/${_recentPlacedOrders[index].quantityUnit}",
                                                               style:
                                                                   const TextStyle(
-                                                                fontSize: 17,
+                                                                fontSize: 15,
                                                               ),
                                                             ),
                                                             // Text(
                                                             //   "Quote price : ${_recentReceivedOrders[index].dealPrice}/${_topProductsSoldList[index].quantityUnit}",
                                                             //   style: const TextStyle(
-                                                            //     fontSize: 18,
+                                                            //     fontSize: 16,
                                                             //   ),
                                                             // ),
                                                             Text(
                                                               "Seller : ${_recentPlacedOrders[index].dealerName}",
                                                               style:
                                                                   const TextStyle(
-                                                                fontSize: 17,
+                                                                fontSize: 15,
                                                               ),
                                                             ),
                                                             Text(
                                                               "Respond by : ${_recentPlacedOrders[index].expectingResponseBefore.toLocal().day}/${_recentPlacedOrders[index].expectingResponseBefore.toLocal().month}/${_recentPlacedOrders[index].expectingResponseBefore.toLocal().year}",
                                                               style:
                                                                   const TextStyle(
-                                                                fontSize: 17,
+                                                                fontSize: 15,
                                                               ),
                                                             ),
                                                           ],

@@ -50,9 +50,12 @@ app.all("*", function (req, res, next) {
     next();
   }
 });
-app.listen(process.env.PORT, function () {
+
+const port = 3001
+
+app.listen(process.env.PORT || port, function () {
   console.log(
-    "Server Started now listening for requests at http://localhost:3001/"
+    `Server Started now listening on port : ${process.env.PORT || port}`
   );
 });
 

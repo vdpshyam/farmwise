@@ -105,7 +105,7 @@ class _BuyerPlaceOrderScreenState extends State<BuyerPlaceOrderScreen> {
                 child: Row(
                   children: [
                     SizedBox(
-                      height: 160,
+                      height: 100,
                       width: 150,
                       child: Column(
                         children: [
@@ -125,7 +125,7 @@ class _BuyerPlaceOrderScreenState extends State<BuyerPlaceOrderScreen> {
                       width: 15,
                     ),
                     SizedBox(
-                      height: 150,
+                      height: 80,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -178,7 +178,7 @@ class _BuyerPlaceOrderScreenState extends State<BuyerPlaceOrderScreen> {
                         ),
                         SizedBox(
                           height: 45,
-                          width: 150,
+                          width: MediaQuery.of(context).size.width * 0.3,
                           child: TextField(
                             controller: _buyerQuotePriceCotroller,
                             onChanged: (value) {
@@ -234,7 +234,7 @@ class _BuyerPlaceOrderScreenState extends State<BuyerPlaceOrderScreen> {
                         ),
                         SizedBox(
                           height: 45,
-                          width: 150,
+                          width: MediaQuery.of(context).size.width * 0.4,
                           child: TextField(
                             controller: _buyerNoOfLotsCotroller,
                             onChanged: (value) {
@@ -301,7 +301,7 @@ class _BuyerPlaceOrderScreenState extends State<BuyerPlaceOrderScreen> {
                           },
                           child: Container(
                             height: 45,
-                            width: 150,
+                            width: MediaQuery.of(context).size.width * 0.4,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: const Color.fromARGB(163, 158, 158, 158),
@@ -354,7 +354,7 @@ class _BuyerPlaceOrderScreenState extends State<BuyerPlaceOrderScreen> {
                           },
                           child: Container(
                             height: 45,
-                            width: 150,
+                            width: MediaQuery.of(context).size.width * 0.4,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: const Color.fromARGB(163, 158, 158, 158),
@@ -391,7 +391,7 @@ class _BuyerPlaceOrderScreenState extends State<BuyerPlaceOrderScreen> {
                         ),
                         SizedBox(
                           height: 45,
-                          width: 150,
+                          width: MediaQuery.of(context).size.width * 0.4,
                           child: InkWell(
                             onTap: () {
                               showDialog(
@@ -407,6 +407,7 @@ class _BuyerPlaceOrderScreenState extends State<BuyerPlaceOrderScreen> {
                                     contentPadding: const EdgeInsets.all(0),
                                     title: const Text(
                                       "Choose payment mode",
+                                      style: TextStyle(fontSize: 20),
                                     ),
                                     content: Column(
                                       mainAxisSize: MainAxisSize.min,
@@ -430,7 +431,7 @@ class _BuyerPlaceOrderScreenState extends State<BuyerPlaceOrderScreen> {
                                                 Text(
                                                   "Cash on delivery",
                                                   style:
-                                                      TextStyle(fontSize: 20),
+                                                      TextStyle(fontSize: 16),
                                                 ),
                                                 Expanded(
                                                   child: SizedBox(),
@@ -462,7 +463,7 @@ class _BuyerPlaceOrderScreenState extends State<BuyerPlaceOrderScreen> {
                                                 Text(
                                                   "UPI",
                                                   style: TextStyle(
-                                                    fontSize: 20,
+                                                    fontSize: 16,
                                                   ),
                                                 ),
                                                 Expanded(
@@ -495,7 +496,7 @@ class _BuyerPlaceOrderScreenState extends State<BuyerPlaceOrderScreen> {
                                                 Text(
                                                   "Credit/Debit card",
                                                   style: TextStyle(
-                                                    fontSize: 20,
+                                                    fontSize: 16,
                                                   ),
                                                 ),
                                                 Expanded(
@@ -547,21 +548,21 @@ class _BuyerPlaceOrderScreenState extends State<BuyerPlaceOrderScreen> {
                     ),
                   ),
                   const Divider(
-                    height: 50,
-                    indent: 60,
-                    endIndent: 60,
+                    height: 30,
+                    indent: 10,
+                    endIndent: 10,
                   ),
                   calculateTotalOrderValue(totalOrderValue),
                   const Divider(
-                    height: 50,
-                    indent: 60,
-                    endIndent: 60,
+                    height: 30,
+                    indent: 10,
+                    endIndent: 10,
                   ),
                 ],
               ),
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 30),
+              padding: const EdgeInsets.only(left: 30,right: 30, bottom: 50),
               child: SizedBox(
                 width: double.maxFinite,
                 child: FilledButton.icon(

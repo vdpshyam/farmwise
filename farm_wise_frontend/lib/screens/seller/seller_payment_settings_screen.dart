@@ -61,7 +61,7 @@ class _SellerPaymentSettingsScreenState
         });
         final snackBar = SnackBar(
           content: const Text(
-            'Something went wrong.Could not fetch reviews. Try again later.',
+            'Something went wrong. Could not fetch subscription details. Try again later.',
           ),
           action: SnackBarAction(
             label: 'okay',
@@ -190,14 +190,14 @@ class _SellerPaymentSettingsScreenState
                                 const Text(
                                   "Current Credit Amount : ",
                                   style: TextStyle(
-                                    fontSize: 19,
+                                    fontSize: 16,
                                     fontWeight: FontWeight.w500,
                                   ),
                                 ),
                                 Text(
                                   "Rs. $creditAmount",
                                   style: const TextStyle(
-                                    fontSize: 19,
+                                    fontSize: 16,
                                   ),
                                 ),
                               ],
@@ -210,7 +210,7 @@ class _SellerPaymentSettingsScreenState
                             const Text(
                               "Transactions left : ",
                               style: TextStyle(
-                                fontSize: 19,
+                                fontSize: 16,
                                 fontWeight: FontWeight.w500,
                               ),
                             ),
@@ -225,14 +225,14 @@ class _SellerPaymentSettingsScreenState
                                     const Text(
                                       "Free",
                                       style: TextStyle(
-                                        fontSize: 19,
+                                        fontSize: 16,
                                         fontWeight: FontWeight.w500,
                                       ),
                                     ),
                                     Text(
                                       "$freeTransactionsLeft",
                                       style: const TextStyle(
-                                        fontSize: 19,
+                                        fontSize: 16,
                                       ),
                                     ),
                                   ],
@@ -242,14 +242,14 @@ class _SellerPaymentSettingsScreenState
                                     const Text(
                                       "Paid",
                                       style: TextStyle(
-                                        fontSize: 19,
+                                        fontSize: 16,
                                         fontWeight: FontWeight.w500,
                                       ),
                                     ),
                                     Text(
                                       "$paidTransactionsLeft",
                                       style: const TextStyle(
-                                        fontSize: 19,
+                                        fontSize: 16,
                                       ),
                                     ),
                                   ],
@@ -311,14 +311,14 @@ class _SellerPaymentSettingsScreenState
                           // Text(
                           //   "Subscription Plans : ",
                           //   style: TextStyle(
-                          //     fontSize: 19,
+                          //     fontSize: 16,
                           //     fontWeight: FontWeight.w500,
                           //   ),
                           // ),
                           // Text(
                           //   "We offer various subscription plans with different features.",
                           //   style: TextStyle(
-                          //     fontSize: 17,
+                          //     fontSize: 15,
                           //   ),
                           // ),
                           SizedBox(
@@ -327,7 +327,7 @@ class _SellerPaymentSettingsScreenState
                           Text(
                             "Subscription Plans Details : ",
                             style: TextStyle(
-                              fontSize: 19,
+                              fontSize: 16,
                               fontWeight: FontWeight.w500,
                             ),
                           ),
@@ -335,7 +335,7 @@ class _SellerPaymentSettingsScreenState
                             "Minimum renewal amount should be more than Rs.400 and get the 80 transcations.We deduced trascation charge for every 4th transaction and initial 3 transaction are free of cost.",
                             textAlign: TextAlign.justify,
                             style: TextStyle(
-                              fontSize: 17,
+                              fontSize: 15,
                             ),
                           ),
                           SizedBox(
@@ -344,7 +344,7 @@ class _SellerPaymentSettingsScreenState
                           Text(
                             "Payment Methods : ",
                             style: TextStyle(
-                              fontSize: 19,
+                              fontSize: 16,
                               fontWeight: FontWeight.w500,
                             ),
                           ),
@@ -352,7 +352,7 @@ class _SellerPaymentSettingsScreenState
                             "We accept [credit/debit cards, PayPal, etc.] as valid payment methods.Payment details are securely processed through our payment gateway.",
                             textAlign: TextAlign.justify,
                             style: TextStyle(
-                              fontSize: 17,
+                              fontSize: 15,
                             ),
                           ),
                           SizedBox(
@@ -361,7 +361,7 @@ class _SellerPaymentSettingsScreenState
                           Text(
                             "Taxes : ",
                             style: TextStyle(
-                              fontSize: 19,
+                              fontSize: 16,
                               fontWeight: FontWeight.w500,
                             ),
                           ),
@@ -369,7 +369,7 @@ class _SellerPaymentSettingsScreenState
                             "Applicable taxes will be added to subscription fees as required by local regulations.",
                             textAlign: TextAlign.justify,
                             style: TextStyle(
-                              fontSize: 17,
+                              fontSize: 15,
                             ),
                           ),
                           SizedBox(
@@ -378,7 +378,7 @@ class _SellerPaymentSettingsScreenState
                           Text(
                             "Cancellations : ",
                             style: TextStyle(
-                              fontSize: 19,
+                              fontSize: 16,
                               fontWeight: FontWeight.w500,
                             ),
                           ),
@@ -386,7 +386,7 @@ class _SellerPaymentSettingsScreenState
                             "Once payment done for the credit, it can not be cancelled.Subscribers cannot cancel the transaction once it proceeded.",
                             textAlign: TextAlign.justify,
                             style: TextStyle(
-                              fontSize: 17,
+                              fontSize: 15,
                             ),
                           ),
                           SizedBox(
@@ -395,7 +395,7 @@ class _SellerPaymentSettingsScreenState
                           Text(
                             "Refunds : ",
                             style: TextStyle(
-                              fontSize: 19,
+                              fontSize: 16,
                               fontWeight: FontWeight.w500,
                             ),
                           ),
@@ -403,7 +403,7 @@ class _SellerPaymentSettingsScreenState
                             "Refunds are not provided for subscription amounts.Refunds may be considered in exceptional cases at our discretion.",
                             textAlign: TextAlign.justify,
                             style: TextStyle(
-                              fontSize: 17,
+                              fontSize: 15,
                             ),
                           ),
                           SizedBox(
@@ -412,7 +412,7 @@ class _SellerPaymentSettingsScreenState
                           Text(
                             "Data Security : ",
                             style: TextStyle(
-                              fontSize: 19,
+                              fontSize: 16,
                               fontWeight: FontWeight.w500,
                             ),
                           ),
@@ -420,7 +420,7 @@ class _SellerPaymentSettingsScreenState
                             "All payment information is encrypted and handled securely according to industry standards.We do not store complete payment information on our servers.",
                             textAlign: TextAlign.justify,
                             style: TextStyle(
-                              fontSize: 17,
+                              fontSize: 15,
                             ),
                           ),
                           SizedBox(
@@ -436,17 +436,17 @@ class _SellerPaymentSettingsScreenState
                                     Text(
                                       "Contact Information : ",
                                       style: TextStyle(
-                                        fontSize: 19,
+                                        fontSize: 16,
                                         fontWeight: FontWeight.w500,
                                       ),
                                     ),
                                   ],
                                 ),
                                 Text(
-                                  "For any payment-related inquiries or concerns, please contact our support team at [admin@farm_wise_frontend.com/+0431 78787878].",
+                                  "For any payment-related inquiries or concerns, please contact our support team at [support@farmwise.com/+91 9898989898].",
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
-                                    fontSize: 17,
+                                    fontSize: 15,
                                   ),
                                 ),
                               ],

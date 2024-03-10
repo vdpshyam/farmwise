@@ -90,7 +90,7 @@ class _BuyerFavoriteTileWidgetState extends State<BuyerFavoriteTileWidget> {
         child: Row(
           children: [
             SizedBox(
-              height: 160,
+              height: 130,
               width: 150,
               child: Stack(
                 alignment: AlignmentDirectional.bottomEnd,
@@ -168,7 +168,7 @@ class _BuyerFavoriteTileWidgetState extends State<BuyerFavoriteTileWidget> {
               width: 5,
             ),
             SizedBox(
-              height: 105,
+              height: 100,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -177,28 +177,28 @@ class _BuyerFavoriteTileWidgetState extends State<BuyerFavoriteTileWidget> {
                     widget.product.productName,
                     overflow: TextOverflow.ellipsis,
                     style: const TextStyle(
-                      fontSize: 16,
+                      fontSize: 15,
                     ),
                   ),
                   Text(
                     "Price : ${widget.product.basePrice}/${widget.product.quantityUnit}",
                     overflow: TextOverflow.ellipsis,
                     style: const TextStyle(
-                      fontSize: 16,
+                      fontSize: 15,
                     ),
                   ),
                   Text(
                     "Location : ${widget.product.location}",
                     overflow: TextOverflow.ellipsis,
                     style: const TextStyle(
-                      fontSize: 16,
+                      fontSize: 15,
                     ),
                   ),
                   Text(
                     "Seller : ${widget.product.sellerName}",
                     overflow: TextOverflow.ellipsis,
                     style: const TextStyle(
-                      fontSize: 16,
+                      fontSize: 15,
                     ),
                   ),
                 ],

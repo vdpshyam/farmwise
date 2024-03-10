@@ -62,7 +62,7 @@ class _SellerSettingsPageState extends State<SellerSettingsPage> {
                   ),
                   Text(
                     "Profile and Contact Settings",
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.w300),
+                    style: TextStyle(fontSize: 17, fontWeight: FontWeight.w300),
                   ),
                   Expanded(
                     child: SizedBox(
@@ -111,7 +111,7 @@ class _SellerSettingsPageState extends State<SellerSettingsPage> {
                   ),
                   Text(
                     "Subscription Settings",
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.w300),
+                    style: TextStyle(fontSize: 17, fontWeight: FontWeight.w300),
                   ),
                   Expanded(
                     child: SizedBox(
@@ -160,7 +160,7 @@ class _SellerSettingsPageState extends State<SellerSettingsPage> {
                   ),
                   Text(
                     "Orders History",
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.w300),
+                    style: TextStyle(fontSize: 17, fontWeight: FontWeight.w300),
                   ),
                   Expanded(
                     child: SizedBox(
@@ -208,7 +208,7 @@ class _SellerSettingsPageState extends State<SellerSettingsPage> {
                   ),
                   Text(
                     "Reviews and Comments",
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.w300),
+                    style: TextStyle(fontSize: 17, fontWeight: FontWeight.w300),
                   ),
                   Expanded(
                     child: SizedBox(
@@ -257,7 +257,7 @@ class _SellerSettingsPageState extends State<SellerSettingsPage> {
                   ),
                   Text(
                     "App Settings",
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.w300),
+                    style: TextStyle(fontSize: 17, fontWeight: FontWeight.w300),
                   ),
                   Expanded(
                     child: SizedBox(

@@ -514,7 +514,7 @@ class _SellerOrderDetailScreenState extends State<SellerOrderDetailScreen> {
                         color: Color.fromARGB(81, 160, 159, 159),
                       ),
                       width: double.maxFinite,
-                      height: 263,
+                      height: 180,
                       child: Image.network(
                         productImages[0],
                         fit: BoxFit.cover,
@@ -530,42 +530,42 @@ class _SellerOrderDetailScreenState extends State<SellerOrderDetailScreen> {
                             padding: const EdgeInsets.only(bottom: 15.0),
                             child: Text(
                               "Item Name : $productName",
-                              style: const TextStyle(fontSize: 20),
+                              style: const TextStyle(fontSize: 16),
                             ),
                           ),
                           Padding(
                             padding: const EdgeInsets.only(bottom: 15.0),
                             child: Text(
                               "Quote price : $dealPrice/$quantityUnit",
-                              style: const TextStyle(fontSize: 20),
+                              style: const TextStyle(fontSize: 16),
                             ),
                           ),
                           Padding(
                             padding: const EdgeInsets.only(bottom: 15.0),
                             child: Text(
                               "No. of Lot(s) : $orderQtyLots",
-                              style: const TextStyle(fontSize: 20),
+                              style: const TextStyle(fontSize: 16),
                             ),
                           ),
                           Padding(
                             padding: const EdgeInsets.only(bottom: 15.0),
                             child: Text(
                               "Total Price : Rs.$orderValue",
-                              style: const TextStyle(fontSize: 20),
+                              style: const TextStyle(fontSize: 16),
                             ),
                           ),
                           Padding(
                             padding: const EdgeInsets.only(bottom: 15.0),
                             child: Text(
                               "Required on or before : ${requiredOnOrBefore?.toLocal().day}/${requiredOnOrBefore?.toLocal().month}/${requiredOnOrBefore?.toLocal().year}",
-                              style: const TextStyle(fontSize: 20),
+                              style: const TextStyle(fontSize: 16),
                             ),
                           ),
                           Padding(
                             padding: const EdgeInsets.only(bottom: 15.0),
                             child: Text(
                               "Expecting response by : ${expectingResponseBefore?.toLocal().day}/${expectingResponseBefore?.toLocal().month}/${expectingResponseBefore?.toLocal().year}",
-                              style: const TextStyle(fontSize: 20),
+                              style: const TextStyle(fontSize: 16),
                             ),
                           ),
                           const Padding(
@@ -573,7 +573,7 @@ class _SellerOrderDetailScreenState extends State<SellerOrderDetailScreen> {
                             child: Text(
                               "Buyer details :",
                               style: TextStyle(
-                                fontSize: 20,
+                                fontSize: 16,
                                 fontWeight: FontWeight.w500,
                               ),
                             ),
@@ -665,7 +665,7 @@ class _SellerOrderDetailScreenState extends State<SellerOrderDetailScreen> {
                             child: Text(
                               "Order Status :",
                               style: TextStyle(
-                                fontSize: 20,
+                                fontSize: 16,
                                 fontWeight: FontWeight.w500,
                               ),
                             ),
@@ -698,7 +698,7 @@ class _SellerOrderDetailScreenState extends State<SellerOrderDetailScreen> {
                                   label: const Text(
                                     "Decline",
                                     style: TextStyle(
-                                      fontSize: 20,
+                                      fontSize: 16,
                                       fontWeight: FontWeight.normal,
                                       color: Color.fromARGB(255, 252, 96, 85),
                                     ),
@@ -717,7 +717,7 @@ class _SellerOrderDetailScreenState extends State<SellerOrderDetailScreen> {
                                   label: const Text(
                                     "Accept",
                                     style: TextStyle(
-                                      fontSize: 20,
+                                      fontSize: 16,
                                       fontWeight: FontWeight.normal,
                                     ),
                                   ),
@@ -767,7 +767,7 @@ class _SellerOrderDetailScreenState extends State<SellerOrderDetailScreen> {
                                     "Mark as completed",
                                     // : "Accept",
                                     style: TextStyle(
-                                      fontSize: 20,
+                                      fontSize: 16,
                                       fontWeight: FontWeight.normal,
                                     ),
                                   ),
@@ -792,7 +792,7 @@ class _SellerOrderDetailScreenState extends State<SellerOrderDetailScreen> {
                                     "Mark as completed",
                                     // : "Accept",
                                     style: TextStyle(
-                                      fontSize: 20,
+                                      fontSize: 16,
                                       fontWeight: FontWeight.normal,
                                     ),
                                   ),
@@ -971,7 +971,7 @@ Widget timeLineDecorationCircleGenerator({
           ),
           if (isCurrent)
             SizedBox(
-              width: 315,
+              width: 260,
               child: Text(
                 milestoneSubtitle,
                 style: const TextStyle(fontSize: 14, color: Colors.grey),

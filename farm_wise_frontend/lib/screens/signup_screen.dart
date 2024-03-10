@@ -156,10 +156,10 @@ class _SignupScreenState extends State<SignupScreen> {
                   //   ),
                   // ),
                   Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 50),
+                    padding: const EdgeInsets.symmetric(vertical: 25),
                     child: Image.asset(
                       'lib/assets/images/logo2.png',
-                      height: 240,
+                      height: 200,
                     ),
                   ),
                   // const Padding(
@@ -212,7 +212,8 @@ class _SignupScreenState extends State<SignupScreen> {
                                 ),
                                 labelText: 'Name',
                               ),
-                              autovalidateMode: AutovalidateMode.onUserInteraction,
+                              autovalidateMode:
+                                  AutovalidateMode.onUserInteraction,
                               validator: (value) {
                                 if (value == null || value.isEmpty) {
                                   return 'Please enter a valid name';
@@ -243,7 +244,8 @@ class _SignupScreenState extends State<SignupScreen> {
                                 ),
                                 labelText: 'Phone Number',
                               ),
-                              autovalidateMode: AutovalidateMode.onUserInteraction,
+                              autovalidateMode:
+                                  AutovalidateMode.onUserInteraction,
                               validator: (value) {
                                 if (value == null ||
                                     value.isEmpty ||
@@ -292,7 +294,8 @@ class _SignupScreenState extends State<SignupScreen> {
                                 ),
                                 labelText: 'Password',
                               ),
-                              autovalidateMode: AutovalidateMode.onUserInteraction,
+                              autovalidateMode:
+                                  AutovalidateMode.onUserInteraction,
                               validator: (value) {
                                 if (value == null ||
                                     value.isEmpty ||
@@ -340,7 +343,8 @@ class _SignupScreenState extends State<SignupScreen> {
                                 ),
                                 labelText: 'Confirm Password',
                               ),
-                              autovalidateMode: AutovalidateMode.onUserInteraction,
+                              autovalidateMode:
+                                  AutovalidateMode.onUserInteraction,
                               validator: (value) {
                                 if (value == null ||
                                     value.isEmpty ||
@@ -377,7 +381,8 @@ class _SignupScreenState extends State<SignupScreen> {
                                 ),
                                 labelText: 'Email',
                               ),
-                              autovalidateMode: AutovalidateMode.onUserInteraction,
+                              autovalidateMode:
+                                  AutovalidateMode.onUserInteraction,
                               validator: (value) {
                                 if (value == null ||
                                     value.isEmpty ||
@@ -409,7 +414,8 @@ class _SignupScreenState extends State<SignupScreen> {
                                 ),
                                 labelText: 'House No. / Street name',
                               ),
-                              autovalidateMode: AutovalidateMode.onUserInteraction,
+                              autovalidateMode:
+                                  AutovalidateMode.onUserInteraction,
                               validator: (value) {
                                 if (value == null || value.isEmpty) {
                                   return 'Please enter valid house no. / street name';
@@ -425,7 +431,8 @@ class _SignupScreenState extends State<SignupScreen> {
                                 padding:
                                     const EdgeInsets.symmetric(vertical: 10.0),
                                 child: SizedBox(
-                                  width: 183,
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.44,
                                   child: TextFormField(
                                     controller: _userLocalityController,
                                     focusNode: _userLocalityFocusNode,
@@ -446,7 +453,8 @@ class _SignupScreenState extends State<SignupScreen> {
                                       ),
                                       labelText: 'Locality',
                                     ),
-                                    autovalidateMode: AutovalidateMode.onUserInteraction,
+                                    autovalidateMode:
+                                        AutovalidateMode.onUserInteraction,
                                     validator: (value) {
                                       if (value == null || value.isEmpty) {
                                         return 'Please enter a valid city';
@@ -463,7 +471,8 @@ class _SignupScreenState extends State<SignupScreen> {
                                 padding:
                                     const EdgeInsets.symmetric(vertical: 10.0),
                                 child: SizedBox(
-                                  width: 153,
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.35,
                                   child: TextFormField(
                                     controller: _userStateController,
                                     focusNode: _userStateFocusNode,
@@ -588,7 +597,8 @@ class _SignupScreenState extends State<SignupScreen> {
                                       ),
                                       labelText: 'State',
                                     ),
-                                    autovalidateMode: AutovalidateMode.onUserInteraction,
+                                    autovalidateMode:
+                                        AutovalidateMode.onUserInteraction,
                                     validator: (value) {
                                       if (value == null || value.isEmpty) {
                                         return 'Please enter a valid state';
@@ -607,7 +617,8 @@ class _SignupScreenState extends State<SignupScreen> {
                                 padding:
                                     const EdgeInsets.symmetric(vertical: 10.0),
                                 child: SizedBox(
-                                  width: 183,
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.44,
                                   child: TextFormField(
                                     controller: _userCityController,
                                     focusNode: _userCityFocusNode,
@@ -736,7 +747,8 @@ class _SignupScreenState extends State<SignupScreen> {
                                       ),
                                       labelText: 'City',
                                     ),
-                                    autovalidateMode: AutovalidateMode.onUserInteraction,
+                                    autovalidateMode:
+                                        AutovalidateMode.onUserInteraction,
                                     validator: (value) {
                                       if (value == null || value.isEmpty) {
                                         return 'Please enter a valid city';
@@ -753,7 +765,8 @@ class _SignupScreenState extends State<SignupScreen> {
                                 padding:
                                     const EdgeInsets.symmetric(vertical: 10.0),
                                 child: SizedBox(
-                                  width: 153,
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.35,
                                   child: TextFormField(
                                     controller: _userPincodeController,
                                     focusNode: _userPincodeFocusNode,
@@ -890,7 +903,8 @@ class _SignupScreenState extends State<SignupScreen> {
                                 ),
                                 labelText: 'Select category',
                               ),
-                              autovalidateMode: AutovalidateMode.onUserInteraction,
+                              autovalidateMode:
+                                  AutovalidateMode.onUserInteraction,
                               validator: (value) {
                                 if (value == null || value.isEmpty) {
                                   return 'Please enter user type';
@@ -899,50 +913,159 @@ class _SignupScreenState extends State<SignupScreen> {
                               },
                             ),
                           ),
-                          Padding(
-                            padding:
-                                const EdgeInsets.only(left: 220.0, top: 20),
-                            child: FilledButton.tonal(
-                              onPressed: () {
-                                debugPrint("Sign-up from Sign-up page");
-                                if (_formKey.currentState!.validate()) {
-                                  var enteredDetails = {
-                                    "userName": _userNameController.text,
-                                    "mobile": _userPhoneController.text,
-                                    "password": _passwordController.text,
-                                    "email": _userEmailController.text,
-                                    "houseNoStreetName":
-                                        _userHouseNoStreetNameController.text,
-                                    "locality": _userLocalityController.text,
-                                    "city": _userCityController.text,
-                                    "state": _userStateController.text,
-                                    "pincode":
-                                        int.parse(_userPincodeController.text),
-                                    "userType": _userTypeController.text,
-                                    "avatarUrl": "",
-                                    "verifiedProfile": false,
-                                    "verifyMobile": false,
-                                    "ratings": 0,
-                                    "ratedUser": [],
-                                    "favoriteProducts": []
-                                  };
-                                  var data = json.encode(enteredDetails);
-                                  // debugPrint(data);
-                                  http
-                                      .post(signUpUrl,
-                                          headers: {
-                                            'Content-Type': 'application/json'
-                                          },
-                                          body: data)
-                                      .then(
-                                    (response) {
-                                      if (response.statusCode == 200) {
-                                        var signUpResp =
-                                            json.decode(response.body);
-                                        // debugPrint(
-                                        //     "${response.statusCode} , $signUpResp");
-                                        if (signUpResp['msg'] ==
-                                            'User credential already exist') {
+                          Row(
+                            mainAxisSize: MainAxisSize.max,
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: [
+                              FilledButton.tonal(
+                                onPressed: () {
+                                  debugPrint("Sign-up from Sign-up page");
+                                  if (_formKey.currentState!.validate()) {
+                                    var enteredDetails = {
+                                      "userName": _userNameController.text,
+                                      "mobile": _userPhoneController.text,
+                                      "password": _passwordController.text,
+                                      "email": _userEmailController.text,
+                                      "houseNoStreetName":
+                                          _userHouseNoStreetNameController.text,
+                                      "locality": _userLocalityController.text,
+                                      "city": _userCityController.text,
+                                      "state": _userStateController.text,
+                                      "pincode": int.parse(
+                                          _userPincodeController.text),
+                                      "userType": _userTypeController.text,
+                                      "avatarUrl": "",
+                                      "verifiedProfile": false,
+                                      "verifyMobile": false,
+                                      "ratings": 0,
+                                      "ratedUser": [],
+                                      "favoriteProducts": []
+                                    };
+                                    var data = json.encode(enteredDetails);
+                                    // debugPrint(data);
+                                    http
+                                        .post(signUpUrl,
+                                            headers: {
+                                              'Content-Type': 'application/json'
+                                            },
+                                            body: data)
+                                        .then(
+                                      (response) {
+                                        if (response.statusCode == 200) {
+                                          var signUpResp =
+                                              json.decode(response.body);
+                                          // debugPrint(
+                                          //     "${response.statusCode} , $signUpResp");
+                                          if (signUpResp['msg'] ==
+                                              'User credential already exist') {
+                                            showDialog(
+                                              context: context,
+                                              builder: (context) {
+                                                return AlertDialog(
+                                                  title: const Column(
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .start,
+                                                    children: [
+                                                      Text(
+                                                        'User already exist.',
+                                                        style: TextStyle(
+                                                          fontSize: 20,
+                                                          fontWeight:
+                                                              FontWeight.normal,
+                                                        ),
+                                                      ),
+                                                      SizedBox(
+                                                        height: 10,
+                                                      ),
+                                                      Divider(
+                                                        indent: 15,
+                                                        endIndent: 15,
+                                                        height: 5,
+                                                        color: Colors.black26,
+                                                      ),
+                                                    ],
+                                                  ),
+                                                  content: const Text(
+                                                    "Please check the entered details, or go to login screen to login to your account",
+                                                  ),
+                                                  actions: [
+                                                    TextButton(
+                                                      onPressed: () {
+                                                        context.go(
+                                                            "/login_screen");
+                                                      },
+                                                      child: const Text(
+                                                        "Go to login screen",
+                                                        textAlign:
+                                                            TextAlign.end,
+                                                      ),
+                                                    ),
+                                                    TextButton(
+                                                      onPressed: () {
+                                                        Navigator.of(context)
+                                                            .pop();
+                                                        _userPhoneController
+                                                            .text = '';
+                                                        _userPhoneFocusNode
+                                                            .requestFocus();
+                                                      },
+                                                      child: const Text(
+                                                        "okay",
+                                                      ),
+                                                    ),
+                                                  ],
+                                                );
+                                              },
+                                            );
+                                          } else if (signUpResp['msg'] ==
+                                              "User Registed successfully") {
+                                            showDialog(
+                                              context: context,
+                                              builder: (context) {
+                                                return AlertDialog(
+                                                  title: const Column(
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .start,
+                                                    children: [
+                                                      Text(
+                                                        'User registeration successful',
+                                                        style: TextStyle(
+                                                          fontSize: 20,
+                                                          fontWeight:
+                                                              FontWeight.normal,
+                                                        ),
+                                                      ),
+                                                      SizedBox(
+                                                        height: 10,
+                                                      ),
+                                                      Divider(
+                                                        indent: 15,
+                                                        endIndent: 15,
+                                                        height: 5,
+                                                        color: Colors.black26,
+                                                      ),
+                                                    ],
+                                                  ),
+                                                  content: const Text(
+                                                    "You will now be re-directed to login screen from where you can access your account.",
+                                                  ),
+                                                  actions: [
+                                                    TextButton(
+                                                      onPressed: () {
+                                                        context.go(
+                                                            "/login_screen");
+                                                      },
+                                                      child: const Text("okay"),
+                                                    ),
+                                                  ],
+                                                );
+                                              },
+                                            );
+                                          }
+                                        } else {
+                                          // debugPrint("${response.statusCode}");
                                           showDialog(
                                             context: context,
                                             builder: (context) {
@@ -952,7 +1075,7 @@ class _SignupScreenState extends State<SignupScreen> {
                                                       CrossAxisAlignment.start,
                                                   children: [
                                                     Text(
-                                                      'User already exist.',
+                                                      "Couldn't signup.",
                                                       style: TextStyle(
                                                         fontSize: 20,
                                                         fontWeight:
@@ -971,73 +1094,12 @@ class _SignupScreenState extends State<SignupScreen> {
                                                   ],
                                                 ),
                                                 content: const Text(
-                                                  "Please check the entered details, or go to login screen to login to your account",
-                                                ),
+                                                    "Something went wrong.Please try again later"),
                                                 actions: [
-                                                  TextButton(
-                                                    onPressed: () {
-                                                      context
-                                                          .go("/login_screen");
-                                                    },
-                                                    child: const Text(
-                                                      "Go to login screen",
-                                                      textAlign: TextAlign.end,
-                                                    ),
-                                                  ),
                                                   TextButton(
                                                     onPressed: () {
                                                       Navigator.of(context)
                                                           .pop();
-                                                      _userPhoneController
-                                                          .text = '';
-                                                      _userPhoneFocusNode
-                                                          .requestFocus();
-                                                    },
-                                                    child: const Text(
-                                                      "okay",
-                                                    ),
-                                                  ),
-                                                ],
-                                              );
-                                            },
-                                          );
-                                        } else if (signUpResp['msg'] ==
-                                            "User Registed successfully") {
-                                          showDialog(
-                                            context: context,
-                                            builder: (context) {
-                                              return AlertDialog(
-                                                title: const Column(
-                                                  crossAxisAlignment:
-                                                      CrossAxisAlignment.start,
-                                                  children: [
-                                                    Text(
-                                                      'User registeration successful',
-                                                      style: TextStyle(
-                                                        fontSize: 20,
-                                                        fontWeight:
-                                                            FontWeight.normal,
-                                                      ),
-                                                    ),
-                                                    SizedBox(
-                                                      height: 10,
-                                                    ),
-                                                    Divider(
-                                                      indent: 15,
-                                                      endIndent: 15,
-                                                      height: 5,
-                                                      color: Colors.black26,
-                                                    ),
-                                                  ],
-                                                ),
-                                                content: const Text(
-                                                  "You will now be re-directed to login screen from where you can access your account.",
-                                                ),
-                                                actions: [
-                                                  TextButton(
-                                                    onPressed: () {
-                                                      context
-                                                          .go("/login_screen");
                                                     },
                                                     child: const Text("okay"),
                                                   ),
@@ -1046,67 +1108,30 @@ class _SignupScreenState extends State<SignupScreen> {
                                             },
                                           );
                                         }
-                                      } else {
-                                        // debugPrint("${response.statusCode}");
-                                        showDialog(
-                                          context: context,
-                                          builder: (context) {
-                                            return AlertDialog(
-                                              title: const Column(
-                                                crossAxisAlignment:
-                                                    CrossAxisAlignment.start,
-                                                children: [
-                                                  Text(
-                                                    "Couldn't signup.",
-                                                    style: TextStyle(
-                                                      fontSize: 20,
-                                                      fontWeight:
-                                                          FontWeight.normal,
-                                                    ),
-                                                  ),
-                                                  SizedBox(
-                                                    height: 10,
-                                                  ),
-                                                  Divider(
-                                                    indent: 15,
-                                                    endIndent: 15,
-                                                    height: 5,
-                                                    color: Colors.black26,
-                                                  ),
-                                                ],
-                                              ),
-                                              content: const Text(
-                                                  "Something went wrong.Please try again later"),
-                                              actions: [
-                                                TextButton(
-                                                  onPressed: () {
-                                                    Navigator.of(context).pop();
-                                                  },
-                                                  child: const Text("okay"),
-                                                ),
-                                              ],
-                                            );
-                                          },
-                                        );
-                                      }
-                                    },
-                                  );
-                                }
-                              },
-                              style: FilledButton.styleFrom(
-                                backgroundColor:
-                                    const Color.fromARGB(255, 13, 95, 69),
-                                foregroundColor: Colors.white,
-                              ),
-                              child: const Text(
-                                "Sign Up",
-                                style: TextStyle(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.normal,
+                                      },
+                                    );
+                                  }
+                                },
+                                style: FilledButton.styleFrom(
+                                  backgroundColor:
+                                      const Color.fromARGB(255, 13, 95, 69),
+                                  foregroundColor: Colors.white,
+                                ),
+                                child: const Text(
+                                  "Sign Up",
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.normal,
+                                  ),
                                 ),
                               ),
-                            ),
+                            ],
                           ),
+                          // Padding(
+                          //   padding:
+                          //       const EdgeInsets.only(left: 220.0, top: 20),
+                          //   child:
+                          // ),
                           Padding(
                             padding:
                                 const EdgeInsets.only(top: 50.0, bottom: 50),

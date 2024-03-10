@@ -274,7 +274,7 @@ class _SellerListscreenItemWidgetState
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 35),
+      padding: const EdgeInsets.symmetric(vertical: 5.0, horizontal: 35),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -314,7 +314,7 @@ class _SellerListscreenItemWidgetState
                   Text(
                     widget.listedItemsScreenProduct.productName,
                     style: const TextStyle(
-                      fontSize: 19,
+                      fontSize: 15,
                     ),
                   ),
                   const SizedBox(
@@ -325,13 +325,13 @@ class _SellerListscreenItemWidgetState
                       const Text(
                         "Base Price : ",
                         style: TextStyle(
-                          fontSize: 19,
+                          fontSize: 15,
                         ),
                       ),
                       Text(
                         '${widget.listedItemsScreenProduct.basePrice} ${widget.listedItemsScreenProduct.quantityUnit}',
                         style: const TextStyle(
-                          fontSize: 19,
+                          fontSize: 15,
                         ),
                       ),
                     ],
@@ -341,13 +341,13 @@ class _SellerListscreenItemWidgetState
                       const Text(
                         "Min. Lot(s) : ",
                         style: TextStyle(
-                          fontSize: 19,
+                          fontSize: 15,
                         ),
                       ),
                       Text(
                         widget.listedItemsScreenProduct.minNoLot.toString(),
                         style: const TextStyle(
-                          fontSize: 19,
+                          fontSize: 15,
                         ),
                       ),
                     ],
@@ -362,7 +362,7 @@ class _SellerListscreenItemWidgetState
           Text(
             "Quantity per Lot : ${widget.listedItemsScreenProduct.quantityPerLot} ${widget.listedItemsScreenProduct.quantityUnit}",
             style: const TextStyle(
-              fontSize: 19,
+              fontSize: 15,
             ),
           ),
           const SizedBox(
@@ -373,13 +373,13 @@ class _SellerListscreenItemWidgetState
               const Text(
                 "Open Orders : ",
                 style: TextStyle(
-                  fontSize: 19,
+                  fontSize: 15,
                 ),
               ),
               Text(
                 "${widget.listedItemsScreenProduct.openOrders}",
                 style: const TextStyle(
-                  fontSize: 19,
+                  fontSize: 15,
                 ),
               ),
             ],
@@ -404,7 +404,7 @@ class _SellerListscreenItemWidgetState
                 ),
                 label: const Text(
                   "Edit",
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.normal),
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.normal),
                 ),
               ),
               TextButton.icon(
@@ -418,7 +418,7 @@ class _SellerListscreenItemWidgetState
                 label: const Text(
                   "Delete",
                   style: TextStyle(
-                    fontSize: 20,
+                    fontSize: 18,
                     fontWeight: FontWeight.normal,
                     color: Color.fromARGB(255, 252, 96, 85),
                   ),

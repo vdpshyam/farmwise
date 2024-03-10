@@ -158,7 +158,7 @@ class _SellerListedItemsPageState extends State<SellerListedItemsPage> {
                               child: Text(
                                 "No listed items yet. Your listed show up here. Add your first item from below.",
                                 textAlign: TextAlign.center,
-                                style: TextStyle(fontSize: 16),
+                                style: TextStyle(fontSize: 15),
                               ),
                             ),
                           ],
@@ -241,7 +241,7 @@ class _SellerListedItemsPageState extends State<SellerListedItemsPage> {
                     Navigator.of(context).push(
                       MaterialPageRoute(
                         builder: (context) {
-                          return const SellerAddItemScreen();
+                          return SellerAddItemScreen(refreshFunc: _onRefresh,);
                         },
                       ),
                     );

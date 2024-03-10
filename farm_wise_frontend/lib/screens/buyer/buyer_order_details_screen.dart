@@ -417,7 +417,7 @@ class _BuyerOrderDetailScreenState extends State<BuyerOrderDetailScreen> {
                         color: Color.fromARGB(81, 160, 159, 159),
                       ),
                       width: double.maxFinite,
-                      height: 263,
+                      height: 180,
                       child: Image.network(
                         productImages[0],
                         fit: BoxFit.cover,
@@ -433,21 +433,21 @@ class _BuyerOrderDetailScreenState extends State<BuyerOrderDetailScreen> {
                             padding: const EdgeInsets.only(bottom: 15.0),
                             child: Text(
                               "Item Name : $productName",
-                              style: const TextStyle(fontSize: 18),
+                              style: const TextStyle(fontSize: 16),
                             ),
                           ),
                           Padding(
                             padding: const EdgeInsets.only(bottom: 15.0),
                             child: Text(
                               "Base price : $basePrice/$quantityUnit",
-                              style: const TextStyle(fontSize: 18),
+                              style: const TextStyle(fontSize: 16),
                             ),
                           ),
                           Padding(
                             padding: const EdgeInsets.only(bottom: 15.0),
                             child: Text(
                               "Quote price : $dealPrice/$quantityUnit",
-                              style: const TextStyle(fontSize: 18),
+                              style: const TextStyle(fontSize: 16),
                             ),
                           ),
                           Padding(
@@ -461,14 +461,14 @@ class _BuyerOrderDetailScreenState extends State<BuyerOrderDetailScreen> {
                             padding: const EdgeInsets.only(bottom: 15.0),
                             child: Text(
                               "Total Price : Rs.$orderValue",
-                              style: const TextStyle(fontSize: 18),
+                              style: const TextStyle(fontSize: 16),
                             ),
                           ),
                           Padding(
                             padding: const EdgeInsets.only(bottom: 15.0),
                             child: Text(
                               "Required on or before : ${requiredOnOrBefore?.toLocal().day}/${requiredOnOrBefore?.toLocal().month}/${requiredOnOrBefore?.toLocal().year}",
-                              style: const TextStyle(fontSize: 18),
+                              style: const TextStyle(fontSize: 16),
                             ),
                           ),
                           const Padding(
@@ -488,7 +488,7 @@ class _BuyerOrderDetailScreenState extends State<BuyerOrderDetailScreen> {
                               children: [
                                 const Text(
                                   "Name : ",
-                                  style: TextStyle(fontSize: 18),
+                                  style: TextStyle(fontSize: 16),
                                 ),
                                 GestureDetector(
                                   onTap: () {
@@ -504,7 +504,7 @@ class _BuyerOrderDetailScreenState extends State<BuyerOrderDetailScreen> {
                                   child: Text(
                                     dealerName,
                                     style: const TextStyle(
-                                      fontSize: 18,
+                                      fontSize: 16,
                                       color: Color.fromARGB(255, 27, 152, 255),
                                     ),
                                   ),
@@ -518,7 +518,7 @@ class _BuyerOrderDetailScreenState extends State<BuyerOrderDetailScreen> {
                                   const EdgeInsets.symmetric(horizontal: 15.0),
                               child: Text(
                                 "Phone: $dealerMobile",
-                                style: const TextStyle(fontSize: 18),
+                                style: const TextStyle(fontSize: 16),
                               ),
                             ),
                           // const Padding(
@@ -552,6 +552,7 @@ class _BuyerOrderDetailScreenState extends State<BuyerOrderDetailScreen> {
                             isOrderAccepted: isOrderAccepted,
                             isSellerClosed: isSellerClosed,
                             updatedAt: updatedAt,
+                            context: context
                           ),
                           const SizedBox(
                             height: 25,
@@ -574,7 +575,7 @@ class _BuyerOrderDetailScreenState extends State<BuyerOrderDetailScreen> {
                                   label: const Text(
                                     "Cancel order",
                                     style: TextStyle(
-                                      fontSize: 20,
+                                      fontSize: 17,
                                       fontWeight: FontWeight.normal,
                                       color: Color.fromARGB(255, 252, 96, 85),
                                     ),
@@ -701,6 +702,7 @@ Widget timeLineDecorationGenerator({
   required bool isBuyerClosed,
   required bool isClosed,
   required DateTime? updatedAt,
+  required BuildContext context
 }) {
   bool isOrderRejected = !isOrderAccepted && isClosed;
   return Column(
@@ -714,6 +716,7 @@ Widget timeLineDecorationGenerator({
         milestoneSubtitle: "Your order is placed.",
         updatedAt: updatedAt,
         isOrderRejected: isOrderRejected,
+        context: context
       ),
       Padding(
         padding: const EdgeInsets.only(left: 13),
@@ -727,6 +730,7 @@ Widget timeLineDecorationGenerator({
           milestoneSubtitle: "Your order is accepted by the seller.",
           updatedAt: updatedAt,
           isOrderRejected: isOrderRejected,
+          context: context
         ),
       if (!isOrderRejected)
         Padding(
@@ -742,6 +746,7 @@ Widget timeLineDecorationGenerator({
           milestoneSubtitle: "Your order is currently in progress.",
           updatedAt: updatedAt,
           isOrderRejected: isOrderRejected,
+          context: context
         ),
       if (!isOrderRejected)
         Padding(
@@ -762,6 +767,7 @@ Widget timeLineDecorationGenerator({
               : "Seller marked this order as complete. Waiting for your response.",
           updatedAt: updatedAt,
           isOrderRejected: isOrderRejected,
+          context: context
         ),
       if (!isOrderRejected)
         Padding(
@@ -777,6 +783,7 @@ Widget timeLineDecorationGenerator({
         milestoneSubtitle: "This Order is closed",
         updatedAt: updatedAt,
         isOrderRejected: isOrderRejected,
+        context: context
       ),
     ],
   );
@@ -789,82 +796,86 @@ Widget timeLineDecorationCircleGenerator({
   required bool isOrderRejected,
   required String milestoneSubtitle,
   required DateTime? updatedAt,
+  required BuildContext context
 }) {
-  return Row(
-    mainAxisSize: MainAxisSize.min,
-    children: [
-      Padding(
-        padding: const EdgeInsets.only(left: 1.0),
-        child: Container(
-          height: 25,
-          width: 25,
-          decoration: BoxDecoration(
-            color: isMilestoneReached
-                ? isOrderRejected
-                    ? Colors.red
-                    : const Color.fromARGB(159, 51, 118, 53)
-                : null,
-            border: Border.all(
-              color: const Color.fromARGB(110, 51, 118, 53),
-              width: isMilestoneReached ? 0 : 2.5,
-              style: BorderStyle.solid,
+  return SizedBox(
+    width: MediaQuery.of(context).size.width * 0.9,
+    child: Row(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Padding(
+          padding: const EdgeInsets.only(left: 1.0),
+          child: Container(
+            height: 25,
+            width: 25,
+            decoration: BoxDecoration(
+              color: isMilestoneReached
+                  ? isOrderRejected
+                      ? Colors.red
+                      : const Color.fromARGB(159, 51, 118, 53)
+                  : null,
+              border: Border.all(
+                color: const Color.fromARGB(110, 51, 118, 53),
+                width: isMilestoneReached ? 0 : 2.5,
+                style: BorderStyle.solid,
+              ),
+              borderRadius: BorderRadius.circular(25),
             ),
-            borderRadius: BorderRadius.circular(25),
+            child: isMilestoneReached
+                ? const Center(
+                    child: SizedBox(
+                      height: 25,
+                      width: 25,
+                      child: Icon(
+                        Icons.done,
+                        color: Colors.white,
+                      ),
+                    ),
+                  )
+                : null,
           ),
-          child: isMilestoneReached
-              ? const Center(
-                  child: SizedBox(
-                    height: 25,
-                    width: 25,
-                    child: Icon(
-                      Icons.done,
-                      color: Colors.white,
+        ),
+        const SizedBox(
+          width: 10,
+        ),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                Text(
+                  milestone,
+                  style: TextStyle(
+                    fontSize: 16.5,
+                    fontWeight: FontWeight.w600,
+                    color: isMilestoneReached ? Colors.black : Colors.grey,
+                  ),
+                ),
+                const SizedBox(
+                  width: 7,
+                ),
+                if (isCurrent)
+                  Text(
+                    "on: ${updatedAt!.toLocal().day}/${updatedAt.toLocal().month}/${updatedAt.toLocal().year}",
+                    style: const TextStyle(
+                      fontSize: 14,
+                      color: Colors.grey,
                     ),
                   ),
-                )
-              : null,
-        ),
-      ),
-      const SizedBox(
-        width: 10,
-      ),
-      Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            children: [
-              Text(
-                milestone,
-                style: TextStyle(
-                  fontSize: 16.5,
-                  fontWeight: FontWeight.w600,
-                  color: isMilestoneReached ? Colors.black : Colors.grey,
-                ),
-              ),
-              const SizedBox(
-                width: 7,
-              ),
-              if (isCurrent)
-                Text(
-                  "on: ${updatedAt!.toLocal().day}/${updatedAt.toLocal().month}/${updatedAt.toLocal().year}",
-                  style: const TextStyle(
-                    fontSize: 14,
-                    color: Colors.grey,
-                  ),
-                ),
-            ],
-          ),
-          if (isCurrent)
-            SizedBox(
-              width: 315,
-              child: Text(
-                milestoneSubtitle,
-                style: const TextStyle(fontSize: 14, color: Colors.grey),
-              ),
+              ],
             ),
-        ],
-      ),
-    ],
+            if (isCurrent)
+              SizedBox(
+                width: 260,
+                child: Text(
+                  milestoneSubtitle,
+                  style: const TextStyle(fontSize: 14, color: Colors.grey),
+                ),
+              ),
+          ],
+        ),
+      ],
+    ),
   );
 }
 

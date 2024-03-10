@@ -57,7 +57,7 @@ class BuyerSettingsPage extends StatelessWidget {
                   ),
                   Text(
                     "Profile and Contact Settings",
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.w300),
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w300),
                   ),
                   Expanded(
                     child: SizedBox(
@@ -106,7 +106,7 @@ class BuyerSettingsPage extends StatelessWidget {
                   ),
                   Text(
                     "Subscription settings",
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.w300),
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w300),
                   ),
                   Expanded(
                     child: SizedBox(
@@ -155,7 +155,7 @@ class BuyerSettingsPage extends StatelessWidget {
                   ),
                   Text(
                     "Orders History",
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.w300),
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w300),
                   ),
                   Expanded(
                     child: SizedBox(
@@ -203,7 +203,7 @@ class BuyerSettingsPage extends StatelessWidget {
                   ),
                   Text(
                     "Reviews and Comments",
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.w300),
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w300),
                   ),
                   Expanded(
                     child: SizedBox(
@@ -252,7 +252,7 @@ class BuyerSettingsPage extends StatelessWidget {
                   ),
                   Text(
                     "App Settings",
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.w300),
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w300),
                   ),
                   Expanded(
                     child: SizedBox(
@@ -288,7 +288,7 @@ class BuyerSettingsPage extends StatelessWidget {
                   Text(
                     "Contact Information : ",
                     style: TextStyle(
-                      fontSize: 17,
+                      fontSize: 16,
                       fontWeight: FontWeight.w400,
                     ),
                   ),
@@ -298,7 +298,7 @@ class BuyerSettingsPage extends StatelessWidget {
                 "For any payment-related inquiries or concerns, please contact our support team at [support@farmwise.com/+91 9898989898].",
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontSize: 16,
+                  fontSize: 14,
                   fontWeight: FontWeight.w300,
                 ),
               ),

@@ -173,7 +173,7 @@ class _SellerPasswordResetScreenState extends State<SellerPasswordResetScreen> {
                                 title: const Text(
                                   'Password succesfully updated',
                                   style: TextStyle(
-                                    fontSize: 18,
+                                    fontSize: 15,
                                   ),
                                 ),
                                 actions: [
@@ -199,13 +199,13 @@ class _SellerPasswordResetScreenState extends State<SellerPasswordResetScreen> {
                                     Text(
                                       'Could not update password.',
                                       style: TextStyle(
-                                        fontSize: 18,
+                                        fontSize: 15,
                                       ),
                                     ),
                                     Text(
                                       'Please try again later.',
                                       style: TextStyle(
-                                        fontSize: 18,
+                                        fontSize: 15,
                                       ),
                                     ),
                                   ],
@@ -231,13 +231,13 @@ class _SellerPasswordResetScreenState extends State<SellerPasswordResetScreen> {
                                 title: const Text(
                                   'Current password wrong.',
                                   style: TextStyle(
-                                    fontSize: 18,
+                                    fontSize: 15,
                                   ),
                                 ),
                                 content: const Text(
                                   'Please enter current password correctly.',
                                   style: TextStyle(
-                                    fontSize: 18,
+                                    fontSize: 15,
                                   ),
                                 ),
                                 actions: [
@@ -260,7 +260,7 @@ class _SellerPasswordResetScreenState extends State<SellerPasswordResetScreen> {
                     label: const Text(
                       "Update",
                       style: TextStyle(
-                        fontSize: 20,
+                        fontSize: 16,
                         fontWeight: FontWeight.normal,
                       ),
                     ),
@@ -276,7 +276,7 @@ class _SellerPasswordResetScreenState extends State<SellerPasswordResetScreen> {
                     label: const Text(
                       "Cancel",
                       style: TextStyle(
-                        fontSize: 20,
+                        fontSize: 16,
                         fontWeight: FontWeight.normal,
                         color: Color.fromARGB(255, 252, 96, 85),
                       ),

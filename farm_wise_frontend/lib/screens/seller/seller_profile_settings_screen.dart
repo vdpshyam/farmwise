@@ -216,7 +216,7 @@ class _SellerProfileSettingsScreenState
               title: const Text(
                 'Details succesfully updated',
                 style: TextStyle(
-                  fontSize: 18,
+                  fontSize: 15,
                 ),
               ),
               actions: [
@@ -238,7 +238,7 @@ class _SellerProfileSettingsScreenState
               title: const Text(
                 "Couldn't change details",
                 style: TextStyle(
-                  fontSize: 18,
+                  fontSize: 15,
                 ),
               ),
               content: const Text("Try again later"),
@@ -544,7 +544,7 @@ class _SellerProfileSettingsScreenState
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 SizedBox(
-                                  width: 175,
+                                  width: MediaQuery.of(context).size.width * 0.4,
                                   child: TextFormField(
                                     controller: _sellerHouselocalityController,
                                     onChanged: (value) {
@@ -567,7 +567,7 @@ class _SellerProfileSettingsScreenState
                                   ),
                                 ),
                                 SizedBox(
-                                  width: 175,
+                                  width: MediaQuery.of(context).size.width * 0.4,
                                   child: TextFormField(
                                     controller: _sellerHouseStateController,
                                     readOnly: true,
@@ -613,7 +613,7 @@ class _SellerProfileSettingsScreenState
                                                 Text(
                                                   'Select State',
                                                   style: TextStyle(
-                                                    fontSize: 20,
+                                                    fontSize: 16,
                                                     fontWeight:
                                                         FontWeight.normal,
                                                   ),
@@ -666,7 +666,7 @@ class _SellerProfileSettingsScreenState
                                                                 .label,
                                                             style:
                                                                 const TextStyle(
-                                                              fontSize: 18,
+                                                              fontSize: 15,
                                                               fontWeight:
                                                                   FontWeight
                                                                       .normal,
@@ -714,7 +714,7 @@ class _SellerProfileSettingsScreenState
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 SizedBox(
-                                  width: 175,
+                                  width: MediaQuery.of(context).size.width * 0.4,
                                   child: TextFormField(
                                     controller: _sellerHouseCityController,
                                     readOnly: true,
@@ -760,7 +760,7 @@ class _SellerProfileSettingsScreenState
                                                 Text(
                                                   'Select City',
                                                   style: TextStyle(
-                                                    fontSize: 20,
+                                                    fontSize: 16,
                                                     fontWeight:
                                                         FontWeight.normal,
                                                   ),
@@ -811,7 +811,7 @@ class _SellerProfileSettingsScreenState
                                                                 .label,
                                                             style:
                                                                 const TextStyle(
-                                                              fontSize: 18,
+                                                              fontSize: 15,
                                                               fontWeight:
                                                                   FontWeight
                                                                       .normal,
@@ -848,7 +848,7 @@ class _SellerProfileSettingsScreenState
                                   ),
                                 ),
                                 SizedBox(
-                                  width: 175,
+                                  width: MediaQuery.of(context).size.width * 0.4,
                                   child: TextFormField(
                                     keyboardType: TextInputType.number,
                                     controller: _sellerHousePincodeController,
@@ -946,7 +946,7 @@ class _SellerProfileSettingsScreenState
                                   label: const Text(
                                     "Reset Password",
                                     style: TextStyle(
-                                      fontSize: 17,
+                                      fontSize: 16,
                                     ),
                                   ),
                                 ),
@@ -974,7 +974,7 @@ class _SellerProfileSettingsScreenState
                                               title: const Text(
                                                 'Discard Changes?',
                                                 style: TextStyle(
-                                                  fontSize: 20,
+                                                  fontSize: 16,
                                                 ),
                                               ),
                                               content: const Text(
@@ -1012,7 +1012,7 @@ class _SellerProfileSettingsScreenState
                                   label: const Text(
                                     "Cancel",
                                     style: TextStyle(
-                                      fontSize: 20,
+                                      fontSize: 16,
                                       fontWeight: FontWeight.normal,
                                       color: Color.fromARGB(255, 252, 96, 85),
                                     ),
@@ -1033,7 +1033,7 @@ class _SellerProfileSettingsScreenState
                                   label: const Text(
                                     "Update",
                                     style: TextStyle(
-                                      fontSize: 20,
+                                      fontSize: 16,
                                       fontWeight: FontWeight.normal,
                                     ),
                                   ),

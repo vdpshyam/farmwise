@@ -13,7 +13,9 @@ import 'package:farm_wise_frontend/providers/user_details_provider.dart';
 import '../loading_screen.dart';
 
 class SellerAddItemScreen extends StatefulWidget {
-  const SellerAddItemScreen({super.key});
+  const SellerAddItemScreen({super.key, required this.refreshFunc, });
+
+  final Function refreshFunc;
 
   @override
   State<SellerAddItemScreen> createState() => _SellerAddItemScreenState();
@@ -121,7 +123,7 @@ class _SellerAddItemScreenState extends State<SellerAddItemScreen> {
                 title: const Text(
                   'Product added succesfully',
                   style: TextStyle(
-                    fontSize: 18,
+                    fontSize: 15,
                   ),
                 ),
                 actions: [
@@ -144,7 +146,7 @@ class _SellerAddItemScreenState extends State<SellerAddItemScreen> {
                 title: const Text(
                   "Couldn't add product.",
                   style: TextStyle(
-                    fontSize: 18,
+                    fontSize: 15,
                   ),
                 ),
                 content: const Text("Try again later."),
@@ -168,7 +170,7 @@ class _SellerAddItemScreenState extends State<SellerAddItemScreen> {
               title: const Text(
                 'Something went wrong.',
                 style: TextStyle(
-                  fontSize: 18,
+                  fontSize: 15,
                 ),
               ),
               content: const Text("Please try again later."),
@@ -185,6 +187,7 @@ class _SellerAddItemScreenState extends State<SellerAddItemScreen> {
           },
         );
       }
+      widget.refreshFunc();
     });
   }
 

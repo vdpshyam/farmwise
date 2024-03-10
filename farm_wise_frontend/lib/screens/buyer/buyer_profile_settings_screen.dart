@@ -545,7 +545,7 @@ class _BuyerProfileSettingsScreenState
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 SizedBox(
-                                  width: 175,
+                                  width: MediaQuery.of(context).size.width * 0.4,
                                   child: TextFormField(
                                     controller: _buyerHouselocalityController,
                                     onChanged: (value) {
@@ -568,7 +568,7 @@ class _BuyerProfileSettingsScreenState
                                   ),
                                 ),
                                 SizedBox(
-                                  width: 175,
+                                  width: MediaQuery.of(context).size.width * 0.4,
                                   child: TextFormField(
                                     controller: _buyerHouseStateController,
                                     readOnly: true,
@@ -715,7 +715,7 @@ class _BuyerProfileSettingsScreenState
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 SizedBox(
-                                  width: 175,
+                                  width: MediaQuery.of(context).size.width * 0.4,
                                   child: TextFormField(
                                     controller: _buyerHouseCityController,
                                     readOnly: true,
@@ -849,7 +849,7 @@ class _BuyerProfileSettingsScreenState
                                   ),
                                 ),
                                 SizedBox(
-                                  width: 175,
+                                  width: MediaQuery.of(context).size.width * 0.4,
                                   child: TextFormField(
                                     keyboardType: TextInputType.number,
                                     controller: _buyerHousePincodeController,
@@ -947,7 +947,7 @@ class _BuyerProfileSettingsScreenState
                                   label: const Text(
                                     "Reset Password",
                                     style: TextStyle(
-                                      fontSize: 17,
+                                      fontSize: 16,
                                     ),
                                   ),
                                 ),
@@ -1013,7 +1013,7 @@ class _BuyerProfileSettingsScreenState
                                   label: const Text(
                                     "Cancel",
                                     style: TextStyle(
-                                      fontSize: 20,
+                                      fontSize: 17,
                                       fontWeight: FontWeight.normal,
                                       color: Color.fromARGB(255, 252, 96, 85),
                                     ),
@@ -1034,7 +1034,7 @@ class _BuyerProfileSettingsScreenState
                                   label: const Text(
                                     "Update",
                                     style: TextStyle(
-                                      fontSize: 20,
+                                      fontSize: 17,
                                       fontWeight: FontWeight.normal,
                                     ),
                                   ),

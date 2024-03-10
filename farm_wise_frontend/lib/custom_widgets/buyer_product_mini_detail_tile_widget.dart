@@ -29,7 +29,10 @@ class _BuyerProductMiniDetailTileWidgetState
     );
     http
         .put(toggleFavoritesUrl,
-            headers: {'Authorization': loggedInUserAuthToken,'Content-Type': 'application/json'},
+            headers: {
+              'Authorization': loggedInUserAuthToken,
+              'Content-Type': 'application/json'
+            },
             body: json.encode({
               "userId": loggedInUserDetails.userId,
               "productId": widget.product.productId
@@ -62,7 +65,6 @@ class _BuyerProductMiniDetailTileWidgetState
   void initState() {
     super.initState();
     checkIsFavorite();
-   
   }
 
   @override
@@ -77,8 +79,8 @@ class _BuyerProductMiniDetailTileWidgetState
         child: Row(
           children: [
             SizedBox(
-              height: 160,
-              width: 150,
+              height: MediaQuery.of(context).size.width * 0.35,
+              width: MediaQuery.of(context).size.width * 0.4,
               child: Stack(
                 alignment: AlignmentDirectional.bottomEnd,
                 children: [
@@ -126,7 +128,8 @@ class _BuyerProductMiniDetailTileWidgetState
               width: 15,
             ),
             SizedBox(
-              height: 150,
+              height: MediaQuery.of(context).size.width * 0.25,
+              width: MediaQuery.of(context).size.width * 0.35,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -142,6 +145,7 @@ class _BuyerProductMiniDetailTileWidgetState
                   ),
                   Text(
                     "Seller : ${widget.product.sellerName}",
+                    style: const TextStyle(overflow: TextOverflow.ellipsis),
                   ),
                 ],
               ),

@@ -194,7 +194,7 @@ router.get("/getAllProductLimitedDetails", async (request, response) => {
       },
       // {
       //   $lookup: {
-      //     from: "users",
+      //     from: "t_users",
       //     localField: "userId",
       //     foreignField: "_id",
       //     as: "sellerDetails",
@@ -308,7 +308,7 @@ router.get("/getOpenOrders", async (request, response) => {
       },
       // {
       //   $lookup: {
-      //     from: "products",
+      //     from: "t_products",
       //     localField: "_id",
       //     foreignField: "userId",
       //     as: "productDetails",
@@ -402,7 +402,7 @@ router.get("/getProductsLimit",verifyAuthToken, async (request, response) => {
         },
         {
           $lookup: {
-            from: "users",
+            from: "t_users",
             localField: "userId",
             foreignField: "_id",
             as: "sellerDetails",
@@ -442,7 +442,7 @@ router.get("/getProductsLimit",verifyAuthToken, async (request, response) => {
         },
         {
           $lookup: {
-            from: "users",
+            from: "t_users",
             localField: "userId",
             foreignField: "_id",
             as: "sellerDetails",
@@ -485,6 +485,8 @@ router.get("/getProductsLimit",verifyAuthToken, async (request, response) => {
 router.get("/getOrdersHistory",verifyAuthToken, async (req, res) => {
   // console.log("************getOrdersHistory Start************");
   try {
+
+    let orderDetails = [];
     await Order.aggregate([
       {
         $match: {
@@ -494,7 +496,7 @@ router.get("/getOrdersHistory",verifyAuthToken, async (req, res) => {
       },
       {
         $lookup: {
-          from: "users",
+          from: "t_users",
           localField: "buyerId",
           foreignField: "_id",
           as: "buyerDetails",
@@ -502,7 +504,7 @@ router.get("/getOrdersHistory",verifyAuthToken, async (req, res) => {
       },
       {
         $lookup: {
-          from: "products",
+          from: "t_products",
           localField: "productId",
           foreignField: "_id",
           as: "productDetails",
@@ -542,33 +544,20 @@ router.get("/getOrdersHistory",verifyAuthToken, async (req, res) => {
         },
       },
     ]).then((value) => {
-      res.status(200).send({
-        message: "Orders history recieved",
-        orderDetails: value,
-      });
+      if(value.length > 0){
+        orderDetails = value;
+      }
+      
     });
 
-    // var myCalDate = new Date("2023-07-20 00:00:00.000");
-    // var myDate = new Date("2023-07-20 06:52:35.598720Z");
-    console.log("************************");
-    console.log("myCalDate: " + myCalDate);
-    // if (myDate.toUTCString() < myCalDate.toUTCString()) {
-      console.log("true");
-    // }
-    console.log("myDate: " + myDate);
-    console.log("************************");
-    // res.status(200).send({ msg: "done" });
-    // const order = await Order.findById(req.body.id);
-    // if (order) {
-    //   res.status(200).send({ message: "Order found", orderDetails: order });
-    // } else {
-    //   res.status(200).send({ message: "Order not found" });
-    // }
+    return res.status(200).send({
+      message: "Orders history recieved",
+      orderDetails: value,
+    });
+
   } catch (error) {
-    // console.log(error);
-    response.status(500).send(error);
+    res.status(500).send(error);
   }
-  // console.log("************getOrdersHistory End************");
 });
 
 
@@ -585,7 +574,7 @@ router.get("/getOrderDetails",verifyAuthToken, async (req, res) => {
       },
       {
         $lookup: {
-          from: "users",
+          from: "t_users",
           localField: "buyerId",
           foreignField: "_id",
           as: "buyerDetails",
@@ -593,7 +582,7 @@ router.get("/getOrderDetails",verifyAuthToken, async (req, res) => {
       },
       // {
       //   $lookup: {
-      //     from: "users",
+      //     from: "t_users",
       //     localField: "buyerId",
       //     foreignField: "_id",
       //     as: "buyerDetails",
@@ -601,7 +590,7 @@ router.get("/getOrderDetails",verifyAuthToken, async (req, res) => {
       // },
       {
         $lookup: {
-          from: "products",
+          from: "t_products",
           localField: "productId",
           foreignField: "_id",
           as: "productDetails",
@@ -675,7 +664,7 @@ router.get("/getActiveOrders",verifyAuthToken, async (req, res) => {
       },
       {
         $lookup: {
-          from: "users",
+          from: "t_users",
           localField: "buyerId",
           foreignField: "_id",
           as: "buyerDetails",
@@ -683,7 +672,7 @@ router.get("/getActiveOrders",verifyAuthToken, async (req, res) => {
       },
       {
         $lookup: {
-          from: "products",
+          from: "t_products",
           localField: "productId",
           foreignField: "_id",
           as: "productDetails",
@@ -752,7 +741,7 @@ router.get("/getPendingOrders",verifyAuthToken,  async (req, res) => {
       },
       {
         $lookup: {
-          from: "users",
+          from: "t_users",
           localField: "buyerId",
           foreignField: "_id",
           as: "buyerDetails",
@@ -760,7 +749,7 @@ router.get("/getPendingOrders",verifyAuthToken,  async (req, res) => {
       },
       {
         $lookup: {
-          from: "products",
+          from: "t_products",
           localField: "productId",
           foreignField: "_id",
           as: "productDetails",
@@ -829,7 +818,7 @@ router.get("/getFlaggedOrders",verifyAuthToken,  async (req, res) => {
       },
       {
         $lookup: {
-          from: "users",
+          from: "t_users",
           localField: "buyerId",
           foreignField: "_id",
           as: "buyerDetails",
@@ -837,7 +826,7 @@ router.get("/getFlaggedOrders",verifyAuthToken,  async (req, res) => {
       },
       {
         $lookup: {
-          from: "products",
+          from: "t_products",
           localField: "productId",
           foreignField: "_id",
           as: "productDetails",
@@ -901,7 +890,7 @@ router.get("/getUserReview",verifyAuthToken,  async (req, res) => {
       },
       {
         $lookup: {
-          from: "users",
+          from: "t_users",
           localField: "postedBy",
           foreignField: "_id",
           as: "buyerDetails",
@@ -1012,7 +1001,7 @@ router.get("/getDashboardStats",verifyAuthToken, async (req, res) => {
       },
       {
         $lookup: {
-          from: "products",
+          from: "t_products",
           localField: "productId",
           foreignField: "_id",
           as: "productDetails",
@@ -1031,7 +1020,7 @@ router.get("/getDashboardStats",verifyAuthToken, async (req, res) => {
       },
       {
         $lookup: {
-          from: "products",
+          from: "t_products",
           localField: "_id",
           foreignField: "_id",
           as: "productDetails",
@@ -1062,7 +1051,7 @@ router.get("/getDashboardStats",verifyAuthToken, async (req, res) => {
       },
       // {
       //   $lookup: {
-      //     from: "products",
+      //     from: "t_products",
       //     localField: "productId",
       //     foreignField: "_id",
       //     as: "productDetails",
@@ -1081,7 +1070,7 @@ router.get("/getDashboardStats",verifyAuthToken, async (req, res) => {
       },
       {
         $lookup: {
-          from: "products",
+          from: "t_products",
           localField: "productId",
           foreignField: "_id",
           as: "productDetails",
@@ -1089,7 +1078,7 @@ router.get("/getDashboardStats",verifyAuthToken, async (req, res) => {
       },
       {
         $lookup: {
-          from: "users",
+          from: "t_users",
           localField: "buyerId",
           foreignField: "_id",
           as: "userDetails",

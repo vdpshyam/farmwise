@@ -418,7 +418,7 @@ class _SellerViewListedItemScreenState
                         const Text(
                           "Available Status : ",
                           style: TextStyle(
-                            fontSize: 19,
+                            fontSize: 16,
                             fontWeight: FontWeight.w500,
                           ),
                         ),
@@ -458,7 +458,7 @@ class _SellerViewListedItemScreenState
                           // ),
                           ),
                       width: double.maxFinite,
-                      height: 263,
+                      height: 250,
                       child: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 0.0),
                         child: Image.network(
@@ -484,14 +484,14 @@ class _SellerViewListedItemScreenState
                               padding: const EdgeInsets.all(8.0),
                               child: Text(
                                 productName,
-                                style: const TextStyle(fontSize: 18),
+                                style: const TextStyle(fontSize: 15,fontWeight: FontWeight.bold),
                               ),
                             ),
                             Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Text(
                                 "Base price : $basePrice/$quantityUnit",
-                                style: const TextStyle(fontSize: 18),
+                                style: const TextStyle(fontSize: 15),
                               ),
                             ),
                             const SizedBox(
@@ -502,7 +502,7 @@ class _SellerViewListedItemScreenState
                               child: Text(
                                 "Bids summary : ",
                                 style: TextStyle(
-                                  fontSize: 18,
+                                  fontSize: 15,
                                   fontWeight: FontWeight.w500,
                                 ),
                               ),
@@ -512,7 +512,7 @@ class _SellerViewListedItemScreenState
                               child: Text(
                                 "Current placed orders : $openPendingOrders",
                                 style: const TextStyle(
-                                  fontSize: 18,
+                                  fontSize: 15,
                                 ),
                               ),
                             ),
@@ -539,14 +539,14 @@ class _SellerViewListedItemScreenState
                                             const Text(
                                               "Max bid",
                                               style: TextStyle(
-                                                fontSize: 18,
+                                                fontSize: 15,
                                                 fontWeight: FontWeight.w500,
                                               ),
                                             ),
                                             Text(
                                               "$maxBid",
                                               style: const TextStyle(
-                                                fontSize: 18,
+                                                fontSize: 15,
                                               ),
                                             ),
                                           ],
@@ -556,14 +556,14 @@ class _SellerViewListedItemScreenState
                                             const Text(
                                               "Avg bid",
                                               style: TextStyle(
-                                                fontSize: 18,
+                                                fontSize: 15,
                                                 fontWeight: FontWeight.w500,
                                               ),
                                             ),
                                             Text(
                                               "$avgBid",
                                               style: const TextStyle(
-                                                fontSize: 18,
+                                                fontSize: 15,
                                               ),
                                             ),
                                           ],
@@ -573,14 +573,14 @@ class _SellerViewListedItemScreenState
                                             const Text(
                                               "Min bid",
                                               style: TextStyle(
-                                                fontSize: 18,
+                                                fontSize: 15,
                                                 fontWeight: FontWeight.w500,
                                               ),
                                             ),
                                             Text(
                                               "$minBid",
                                               style: const TextStyle(
-                                                fontSize: 18,
+                                                fontSize: 15,
                                               ),
                                             ),
                                           ],
@@ -607,7 +607,7 @@ class _SellerViewListedItemScreenState
                               child: Text(
                                 "Product details :",
                                 style: TextStyle(
-                                  fontSize: 18,
+                                  fontSize: 15,
                                   fontWeight: FontWeight.w500,
                                 ),
                               ),
@@ -616,28 +616,28 @@ class _SellerViewListedItemScreenState
                               padding: const EdgeInsets.all(8.0),
                               child: Text(
                                 "Quantity per lot (in $quantityUnit) : $quantityPerLot",
-                                style: const TextStyle(fontSize: 18),
+                                style: const TextStyle(fontSize: 15),
                               ),
                             ),
                             Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Text(
                                 "Min no. of lot(s) : $minNoLot",
-                                style: const TextStyle(fontSize: 18),
+                                style: const TextStyle(fontSize: 15),
                               ),
                             ),
                             Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Text(
                                 "Produced date : ${producedDate.toLocal().day}/${producedDate.toLocal().month}/${producedDate.toLocal().year}",
-                                style: const TextStyle(fontSize: 18),
+                                style: const TextStyle(fontSize: 15),
                               ),
                             ),
                             Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Text(
                                 "Available for orders from : ${availableFrom.toLocal().day}/${availableFrom.toLocal().month}/${availableFrom.toLocal().year}",
-                                style: const TextStyle(fontSize: 18),
+                                style: const TextStyle(fontSize: 15),
                               ),
                             ),
                             const Padding(
@@ -646,7 +646,7 @@ class _SellerViewListedItemScreenState
                               child: Text(
                                 "Product description: ",
                                 style: TextStyle(
-                                  fontSize: 18,
+                                  fontSize: 15,
                                   fontWeight: FontWeight.w500,
                                 ),
                               ),
@@ -655,7 +655,7 @@ class _SellerViewListedItemScreenState
                               padding: const EdgeInsets.all(8.0),
                               child: Text(
                                 productDesc,
-                                style: const TextStyle(fontSize: 18),
+                                style: const TextStyle(fontSize: 15),
                               ),
                             ),
                             const Divider(
@@ -688,7 +688,7 @@ class _SellerViewListedItemScreenState
                             label: const Text(
                               "Edit",
                               style: TextStyle(
-                                  fontSize: 20, fontWeight: FontWeight.normal),
+                                  fontSize: 16, fontWeight: FontWeight.normal),
                             ),
                           ),
                           TextButton.icon(
@@ -702,7 +702,7 @@ class _SellerViewListedItemScreenState
                             label: const Text(
                               "Delete",
                               style: TextStyle(
-                                fontSize: 20,
+                                fontSize: 16,
                                 fontWeight: FontWeight.normal,
                                 color: Color.fromARGB(255, 252, 96, 85),
                               ),

@@ -61,7 +61,7 @@ class _BuyerPaymentSettingsScreenState
         });
         final snackBar = SnackBar(
           content: const Text(
-            'Something went wrong.Could not fetch reviews. Try again later.',
+            'Something went wrong. Could not fetch subscription details. Try again later.',
           ),
           action: SnackBarAction(
             label: 'okay',

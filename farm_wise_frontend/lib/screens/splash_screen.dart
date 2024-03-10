@@ -72,7 +72,7 @@ class _SplashScreenState extends State<SplashScreen> {
         child: Center(
           child: Image.asset(
             'lib/assets/images/logo2.png',
-            height: 240,
+            height: 200,
           ),
           // ChangeColors(
           //   brightness: -0.1,

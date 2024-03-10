@@ -6,7 +6,7 @@ import 'package:http/http.dart' as http;
 import '../../providers/https_provider.dart';
 import '../../providers/user_details_provider.dart';
 import '../user_public_profile_screen.dart';
-import 'buyer_payment_settings_screen.dart';
+// import 'buyer_payment_settings_screen.dart';
 import 'buyer_place_order_screen.dart';
 
 class BuyerItemDetailScreen extends StatefulWidget {
@@ -50,7 +50,10 @@ class _BuyerItemDetailScreenState extends State<BuyerItemDetailScreen> {
     );
     http
         .put(toggleFavoritesUrl,
-            headers: {'Authorization': loggedInUserAuthToken,'Content-Type': 'application/json'},
+            headers: {
+              'Authorization': loggedInUserAuthToken,
+              'Content-Type': 'application/json'
+            },
             body: json.encode({
               "userId": loggedInUserDetails.userId,
               "productId": widget.productId
@@ -74,7 +77,10 @@ class _BuyerItemDetailScreenState extends State<BuyerItemDetailScreen> {
   void getProductDetails() {
     http.get(
       productDetailUrl,
-      headers: {'Authorization': loggedInUserAuthToken,'Content-Type': 'application/json'},
+      headers: {
+        'Authorization': loggedInUserAuthToken,
+        'Content-Type': 'application/json'
+      },
     ).then((response) {
       var getProductDetailsResp = json.decode(response.body);
       if (getProductDetailsResp["message"] == "Product details found") {
@@ -107,7 +113,10 @@ class _BuyerItemDetailScreenState extends State<BuyerItemDetailScreen> {
   void getProductBidDetails() {
     http.get(
       productBidDetailUrl,
-      headers: {'Authorization': loggedInUserAuthToken,'Content-Type': 'application/json'},
+      headers: {
+        'Authorization': loggedInUserAuthToken,
+        'Content-Type': 'application/json'
+      },
     ).then((response) {
       if (response.statusCode == 200) {
         var getProductBidDetailsResp = json.decode(response.body);
@@ -272,14 +281,15 @@ class _BuyerItemDetailScreenState extends State<BuyerItemDetailScreen> {
                               padding: const EdgeInsets.all(8.0),
                               child: Text(
                                 productName,
-                                style: const TextStyle(fontSize: 18),
+                                style: const TextStyle(
+                                    fontSize: 15, fontWeight: FontWeight.bold),
                               ),
                             ),
                             Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Text(
                                 "Base price : $basePrice/$quantityUnit",
-                                style: const TextStyle(fontSize: 18),
+                                style: const TextStyle(fontSize: 15),
                               ),
                             ),
                             const SizedBox(
@@ -290,7 +300,7 @@ class _BuyerItemDetailScreenState extends State<BuyerItemDetailScreen> {
                               child: Text(
                                 "Bids summary : ",
                                 style: TextStyle(
-                                  fontSize: 18,
+                                  fontSize: 15,
                                   fontWeight: FontWeight.w500,
                                 ),
                               ),
@@ -300,7 +310,7 @@ class _BuyerItemDetailScreenState extends State<BuyerItemDetailScreen> {
                               child: Text(
                                 "Current placed orders : $openPendingOrders",
                                 style: const TextStyle(
-                                  fontSize: 18,
+                                  fontSize: 15,
                                 ),
                               ),
                             ),
@@ -327,14 +337,14 @@ class _BuyerItemDetailScreenState extends State<BuyerItemDetailScreen> {
                                             const Text(
                                               "Max bid",
                                               style: TextStyle(
-                                                fontSize: 18,
+                                                fontSize: 15,
                                                 fontWeight: FontWeight.w500,
                                               ),
                                             ),
                                             Text(
                                               "$maxBid",
                                               style: const TextStyle(
-                                                fontSize: 18,
+                                                fontSize: 15,
                                               ),
                                             ),
                                           ],
@@ -344,14 +354,14 @@ class _BuyerItemDetailScreenState extends State<BuyerItemDetailScreen> {
                                             const Text(
                                               "Avg bid",
                                               style: TextStyle(
-                                                fontSize: 18,
+                                                fontSize: 15,
                                                 fontWeight: FontWeight.w500,
                                               ),
                                             ),
                                             Text(
                                               "$avgBid",
                                               style: const TextStyle(
-                                                fontSize: 18,
+                                                fontSize: 15,
                                               ),
                                             ),
                                           ],
@@ -361,14 +371,14 @@ class _BuyerItemDetailScreenState extends State<BuyerItemDetailScreen> {
                                             const Text(
                                               "Min bid",
                                               style: TextStyle(
-                                                fontSize: 18,
+                                                fontSize: 15,
                                                 fontWeight: FontWeight.w500,
                                               ),
                                             ),
                                             Text(
                                               "$minBid",
                                               style: const TextStyle(
-                                                fontSize: 18,
+                                                fontSize: 15,
                                               ),
                                             ),
                                           ],
@@ -395,7 +405,7 @@ class _BuyerItemDetailScreenState extends State<BuyerItemDetailScreen> {
                               child: Text(
                                 "Product details :",
                                 style: TextStyle(
-                                  fontSize: 18,
+                                  fontSize: 15,
                                   fontWeight: FontWeight.w500,
                                 ),
                               ),
@@ -404,35 +414,35 @@ class _BuyerItemDetailScreenState extends State<BuyerItemDetailScreen> {
                               padding: const EdgeInsets.all(8.0),
                               child: Text(
                                 "Quantity per lot (in $quantityUnit) : $quantityPerLot",
-                                style: const TextStyle(fontSize: 18),
+                                style: const TextStyle(fontSize: 15),
                               ),
                             ),
                             Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Text(
                                 "Min no. of lot(s) : $minNoLot",
-                                style: const TextStyle(fontSize: 18),
+                                style: const TextStyle(fontSize: 15),
                               ),
                             ),
                             Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Text(
                                 "Produced date : ${producedDate.toLocal().day}/${producedDate.toLocal().month}/${producedDate.toLocal().year}",
-                                style: const TextStyle(fontSize: 18),
+                                style: const TextStyle(fontSize: 15),
                               ),
                             ),
                             Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Text(
                                 "Available for orders from : ${availableFrom.toLocal().day}/${availableFrom.toLocal().month}/${availableFrom.toLocal().year}",
-                                style: const TextStyle(fontSize: 18),
+                                style: const TextStyle(fontSize: 15),
                               ),
                             ),
                             Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Text(
                                 "Location : $location",
-                                style: const TextStyle(fontSize: 18),
+                                style: const TextStyle(fontSize: 15),
                               ),
                             ),
                             const Padding(
@@ -441,7 +451,7 @@ class _BuyerItemDetailScreenState extends State<BuyerItemDetailScreen> {
                               child: Text(
                                 "Product description: ",
                                 style: TextStyle(
-                                  fontSize: 18,
+                                  fontSize: 15,
                                   fontWeight: FontWeight.w500,
                                 ),
                               ),
@@ -450,7 +460,7 @@ class _BuyerItemDetailScreenState extends State<BuyerItemDetailScreen> {
                               padding: const EdgeInsets.all(8.0),
                               child: Text(
                                 productDesc,
-                                style: const TextStyle(fontSize: 18),
+                                style: const TextStyle(fontSize: 15),
                               ),
                             ),
                             const Divider(
@@ -462,7 +472,7 @@ class _BuyerItemDetailScreenState extends State<BuyerItemDetailScreen> {
                               child: Text(
                                 "Seller details : ",
                                 style: TextStyle(
-                                  fontSize: 18,
+                                  fontSize: 15,
                                   fontWeight: FontWeight.w500,
                                 ),
                               ),
@@ -473,7 +483,7 @@ class _BuyerItemDetailScreenState extends State<BuyerItemDetailScreen> {
                                 children: [
                                   const Text(
                                     "Name : ",
-                                    style: TextStyle(fontSize: 18),
+                                    style: TextStyle(fontSize: 15),
                                   ),
                                   GestureDetector(
                                     onTap: () {
@@ -489,7 +499,7 @@ class _BuyerItemDetailScreenState extends State<BuyerItemDetailScreen> {
                                     child: Text(
                                       sellerName,
                                       style: const TextStyle(
-                                        fontSize: 18,
+                                        fontSize: 15,
                                         color:
                                             Color.fromARGB(255, 27, 152, 255),
                                       ),
@@ -502,7 +512,7 @@ class _BuyerItemDetailScreenState extends State<BuyerItemDetailScreen> {
                             //   padding: const EdgeInsets.all(8.0),
                             //   child: Text(
                             //     "Mobile: $sellerMobile",
-                            //     style: const TextStyle(fontSize: 18),
+                            //     style: const TextStyle(fontSize: 15),
                             //   ),
                             // ),
                             const Divider(
@@ -520,82 +530,85 @@ class _BuyerItemDetailScreenState extends State<BuyerItemDetailScreen> {
                         width: double.maxFinite,
                         child: FilledButton.icon(
                           onPressed: () {
-                            bool isPLaceOrderEligible;
-                            var checkIsPLaceOrderEligibleUrl = Uri.http(
-                                authority,
-                                'api/payment/checkIsPLaceOrderEligible', {
-                              "userId": loggedInUserDetails.userId,
-                            });
-                            http.get(
-                              checkIsPLaceOrderEligibleUrl,
-                              headers: {'Authorization': loggedInUserAuthToken,'Content-Type': 'application/json'},
-                            ).then((response) {
-                              if (response.statusCode == 200) {
-                                var checkIsPLaceOrderEligibleResp =
-                                    json.decode(response.body);
 
-                                isPLaceOrderEligible =
-                                    checkIsPLaceOrderEligibleResp[
-                                        'isPLaceOrderEligible'];
-                                debugPrint(
-                                    "isPLaceOrderEligible : $isPLaceOrderEligible");
-                                if (isPLaceOrderEligible) {
-                                  Navigator.of(context).push(
-                                    MaterialPageRoute(
-                                      builder: (context) {
-                                        return BuyerPlaceOrderScreen(
-                                          basePrice: basePrice,
-                                          minNoLot: minNoLot,
-                                          productImageUrl: productImages[0],
-                                          productName: productName,
-                                          quantityPerLot: quantityPerLot,
-                                          quantityUnit: quantityUnit,
-                                          sellerMobile: sellerMobile,
-                                          sellerName: sellerName,
-                                          productId: widget.productId,
-                                        );
-                                      },
-                                    ),
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context) {
+                                  return BuyerPlaceOrderScreen(
+                                    basePrice: basePrice,
+                                    minNoLot: minNoLot,
+                                    productImageUrl: productImages[0],
+                                    productName: productName,
+                                    quantityPerLot: quantityPerLot,
+                                    quantityUnit: quantityUnit,
+                                    sellerMobile: sellerMobile,
+                                    sellerName: sellerName,
+                                    productId: widget.productId,
                                   );
-                                } else {
-                                  showDialog(
-                                    context: context,
-                                    builder: (context) {
-                                      return AlertDialog(
-                                        title: const Text(
-                                          "No enough credits to place order.",
-                                        ),
-                                        content: const Text(
-                                          "Please subscribe to get credits inorder to be able to place order.",
-                                          style: TextStyle(
-                                            fontSize: 17,
-                                          ),
-                                        ),
-                                        actions: [
-                                          TextButton(
-                                            onPressed: () {
-                                              Navigator.of(context).pop();
-                                            },
-                                            child: const Text("okay"),
-                                          ),
-                                          TextButton(
-                                            onPressed: () {
-                                              Navigator.of(context)
-                                                  .push(MaterialPageRoute(
-                                                builder: (context) {
-                                                  return const BuyerPaymentSettingsScreen();
-                                                },
-                                              ));
-                                            },
-                                            child: const Text("Subscribe now"),
-                                          ),
-                                        ],
-                                      );
-                                    },
-                                  );
-                                }
-                              }
-                            });
+                                },
+                              ),
+                            );
+
+                            // bool isPLaceOrderEligible;
+                            // var checkIsPLaceOrderEligibleUrl = Uri.http(
+                            //     authority,
+                            //     'api/payment/checkIsPLaceOrderEligible', {
+                            //   "userId": loggedInUserDetails.userId,
+                            // });
+                            // http.get(
+                            //   checkIsPLaceOrderEligibleUrl,
+                            //   headers: {'Authorization': loggedInUserAuthToken,'Content-Type': 'application/json'},
+                            // ).then((response) {
+                            //   if (response.statusCode == 200) {
+                            //     var checkIsPLaceOrderEligibleResp =
+                            //         json.decode(response.body);
+
+                            //     isPLaceOrderEligible =
+                            //         checkIsPLaceOrderEligibleResp[
+                            //             'isPLaceOrderEligible'];
+                            //     debugPrint(
+                            //         "isPLaceOrderEligible : $isPLaceOrderEligible");
+                            // if (isPLaceOrderEligible) {
+
+                            // } else {
+                            //   showDialog(
+                            //     context: context,
+                            //     builder: (context) {
+                            //       return AlertDialog(
+                            //         title: const Text(
+                            //           "No enough credits to place order.",
+                            //         ),
+                            //         content: const Text(
+                            //           "Please subscribe to get credits inorder to be able to place order.",
+                            //           style: TextStyle(
+                            //             fontSize: 17,
+                            //           ),
+                            //         ),
+                            //         actions: [
+                            //           TextButton(
+                            //             onPressed: () {
+                            //               Navigator.of(context).pop();
+                            //             },
+                            //             child: const Text("okay"),
+                            //           ),
+                            //           TextButton(
+                            //             onPressed: () {
+                            //               Navigator.of(context)
+                            //                   .push(MaterialPageRoute(
+                            //                 builder: (context) {
+                            //                   return const BuyerPaymentSettingsScreen();
+                            //                 },
+                            //               ));
+                            //             },
+                            //             child: const Text("Subscribe now"),
+                            //           ),
+                            //         ],
+                            //       );
+                            //     },
+                            //   );
+                            // }
+                            //   }
+                            // });
                           },
                           label: const Text("Place Order"),
                           icon: const Icon(Icons.check),

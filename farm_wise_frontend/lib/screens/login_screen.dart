@@ -101,7 +101,8 @@ class _LoginScreenState extends State<LoginScreen> {
                 loggedInUserDetails = User(
                     userId: getUserDetailsResp['userDetails']['_id'],
                     userName: getUserDetailsResp['userDetails']['userName'],
-                    avatarUrl: getUserDetailsResp['userDetails']['avatarUrl'] ?? '',
+                    avatarUrl:
+                        getUserDetailsResp['userDetails']['avatarUrl'] ?? '',
                     mobile: getUserDetailsResp['userDetails']['mobile'],
                     userType: getUserDetailsResp['userDetails']['userType'],
                     email: getUserDetailsResp['userDetails']['email'],
@@ -290,10 +291,10 @@ class _LoginScreenState extends State<LoginScreen> {
                   //   ),
                   // ),
                   Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 50),
+                    padding: const EdgeInsets.symmetric(vertical: 25),
                     child: Image.asset(
                       'lib/assets/images/logo2.png',
-                      height: 240,
+                      height: 200,
                     ),
                   ),
                   // const Padding(
@@ -400,30 +401,37 @@ class _LoginScreenState extends State<LoginScreen> {
                               },
                             ),
                           ),
-                          Padding(
-                            padding:
-                                const EdgeInsets.only(left: 240.0, top: 20),
-                            child: FilledButton.tonal(
-                              style: FilledButton.styleFrom(
-                                backgroundColor:
-                                    const Color.fromARGB(255, 13, 95, 69),
-                                foregroundColor: Colors.white,
-                              ),
-                              onPressed: () {
-                                debugPrint("Login from Login page");
-                                if (_formKey.currentState!.validate()) {
-                                  login();
-                                }
-                              },
-                              child: const Text(
-                                "Login",
-                                style: TextStyle(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.normal,
+                          Row(
+                            mainAxisSize : MainAxisSize.max,
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: [
+                              FilledButton.tonal(
+                                style: FilledButton.styleFrom(
+                                  backgroundColor:
+                                      const Color.fromARGB(255, 13, 95, 69),
+                                  foregroundColor: Colors.white,
+                                ),
+                                onPressed: () {
+                                  debugPrint("Login from Login page");
+                                  if (_formKey.currentState!.validate()) {
+                                    login();
+                                  }
+                                },
+                                child: const Text(
+                                  "Login",
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.normal,
+                                  ),
                                 ),
                               ),
-                            ),
+                            ],
                           ),
+                          // Padding(
+                          //   padding:
+                          //       const EdgeInsets.only(left: 240.0, top: 20),
+                          //   child:
+                          // ),
                           Padding(
                             padding: const EdgeInsets.only(top: 50.0),
                             child: FilledButton(

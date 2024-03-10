@@ -250,67 +250,70 @@ class BuyerOrderScreenPendingOrderWidget extends StatelessWidget {
     return Column(
       children: [
         Padding(
-          padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 35),
+          padding: const EdgeInsets.symmetric(vertical: 5.0, horizontal: 35),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const SizedBox(
                 height: 10,
               ),
-              Row(
-                children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      color: const Color.fromARGB(54, 160, 159, 159),
-                      // border: Border(
-                      //   top: BorderSide(color: Colors.black),
-                      //   left: BorderSide(color: Colors.black),
-                      //   right: BorderSide(color: Colors.black),
-                      //   bottom: BorderSide(color: Colors.black),
-                      // ),
-                      borderRadius: BorderRadius.circular(7),
+              SizedBox(
+                height: 90,
+                child: Row(
+                  children: [
+                    Container(
+                      decoration: BoxDecoration(
+                        color: const Color.fromARGB(54, 160, 159, 159),
+                        // border: Border(
+                        //   top: BorderSide(color: Colors.black),
+                        //   left: BorderSide(color: Colors.black),
+                        //   right: BorderSide(color: Colors.black),
+                        //   bottom: BorderSide(color: Colors.black),
+                        // ),
+                        borderRadius: BorderRadius.circular(7),
+                      ),
+                      height: 105,
+                      width: 105,
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(7),
+                        child: Image.network(
+                          order.productImages[0],
+                          fit: BoxFit.cover,
+                        ),
+                      ),
                     ),
-                    height: 105,
-                    width: 105,
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(7),
-                      child: Image.network(
-                        order.productImages[0],
-                        fit: BoxFit.cover,
-                      ),
+                    const SizedBox(
+                      width: 20,
                     ),
-                  ),
-                  const SizedBox(
-                    width: 20,
-                  ),
-                  Column(
-                    mainAxisSize: MainAxisSize.min,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        order.productName,
-                        style: const TextStyle(
-                          fontSize: 17.5,
+                    Column(
+                      mainAxisSize: MainAxisSize.min,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          order.productName,
+                          style: const TextStyle(
+                            fontSize: 16,
+                          ),
                         ),
-                      ),
-                      const SizedBox(
-                        height: 20,
-                      ),
-                      Text(
-                        "Price : ${order.dealPrice}/${order.quantityUnit}",
-                        style: const TextStyle(
-                          fontSize: 17.5,
+                        const SizedBox(
+                          height: 20,
                         ),
-                      ),
-                      Text(
-                        "Lots : ${order.orderQtyLots}",
-                        style: const TextStyle(
-                          fontSize: 17.5,
+                        Text(
+                          "Price : ${order.dealPrice}/${order.quantityUnit}",
+                          style: const TextStyle(
+                            fontSize: 16,
+                          ),
                         ),
-                      ),
-                    ],
-                  ),
-                ],
+                        Text(
+                          "Lots : ${order.orderQtyLots}",
+                          style: const TextStyle(
+                            fontSize: 16,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
               ),
               const SizedBox(
                 height: 15,
@@ -326,7 +329,7 @@ class BuyerOrderScreenPendingOrderWidget extends StatelessWidget {
               Text(
                 "Placed on : ${order.recievedOn.toLocal().day}/${order.recievedOn.toLocal().month}/${order.recievedOn.toLocal().year}",
                 style: const TextStyle(
-                  fontSize: 17.5,
+                  fontSize: 16,
                 ),
               ),
               // (order.isOrderAccepted)
@@ -340,7 +343,7 @@ class BuyerOrderScreenPendingOrderWidget extends StatelessWidget {
               Text(
                 "Expecting response : ${order.expectingResponseBefore.toLocal().day}/${order.expectingResponseBefore.toLocal().month}/${order.expectingResponseBefore.toLocal().year}",
                 style: const TextStyle(
-                  fontSize: 17.5,
+                  fontSize: 16,
                 ),
               ),
               const SizedBox(
