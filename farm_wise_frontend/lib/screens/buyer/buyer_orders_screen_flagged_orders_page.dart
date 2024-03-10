@@ -73,7 +73,7 @@ class _BuyerOrdersScreenFlaggedOrdersPageState
   @override
   void initState() {
     super.initState();
-    flaggedOrdersUrl = Uri.http(authority, 'api/common/getFlaggedOrders', {
+    flaggedOrdersUrl = Uri.https(authority, 'api/common/getFlaggedOrders', {
       "id": loggedInUserDetails.userId,
     });
     getFlaggedOrders();

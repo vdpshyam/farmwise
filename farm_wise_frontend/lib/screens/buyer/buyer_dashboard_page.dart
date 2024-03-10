@@ -212,7 +212,7 @@ class _BuyerDashboardPageState extends State<BuyerDashboardPage> {
   @override
   void initState() {
     super.initState();
-    getDashboardStatsUrl = Uri.http(authority, 'api/common/getDashboardStats', {
+    getDashboardStatsUrl = Uri.https(authority, 'api/common/getDashboardStats', {
       "userId": loggedInUserDetails.userId,
     });
     getDashboardStats();
@@ -873,7 +873,7 @@ class _BuyerDashboardPageState extends State<BuyerDashboardPage> {
                                       itemBuilder: (context, index) {
                                         return InkWell(
                                           onTap: () {
-                                            //  var orderDetailUrl = Uri.http(authority,
+                                            //  var orderDetailUrl = Uri.https(authority,
                                             //       'api/common/getOrderDetails', {
                                             //     "id": _recentPlacedOrders[index].orderId
                                             //   });

@@ -42,7 +42,7 @@ class SellerOrderScreenFlaggedOrderWidget extends StatelessWidget {
   //                   pageBuilder: (BuildContext context, _, __) {
   //                     return const LoadingScreen();
   //                   }));
-  //               var rejectOrderUrl = Uri.http(
+  //               var rejectOrderUrl = Uri.https(
   //                 authority,
   //                 'api/common/updateOrderDetails',
   //               );
@@ -141,7 +141,7 @@ class SellerOrderScreenFlaggedOrderWidget extends StatelessWidget {
   //       pageBuilder: (BuildContext context, _, __) {
   //         return const LoadingScreen();
   //       }));
-  //   var acceptOrderUrl = Uri.http(
+  //   var acceptOrderUrl = Uri.https(
   //     authority,
   //     'api/common/updateOrderDetails',
   //   );
@@ -196,7 +196,7 @@ class SellerOrderScreenFlaggedOrderWidget extends StatelessWidget {
   // }
 
   void markAsComplete(BuildContext context) {
-    var markAsCompleteUrl = Uri.http(
+    var markAsCompleteUrl = Uri.https(
       authority,
       'api/common/updateOrderDetails',
     );

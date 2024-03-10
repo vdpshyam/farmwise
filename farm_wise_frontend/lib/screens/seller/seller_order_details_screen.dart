@@ -143,7 +143,7 @@ class _SellerOrderDetailScreenState extends State<SellerOrderDetailScreen> {
                     pageBuilder: (BuildContext context, _, __) {
                       return const LoadingScreen();
                     }));
-                var rejectOrderUrl = Uri.http(
+                var rejectOrderUrl = Uri.https(
                   authority,
                   'api/common/updateOrderDetails',
                 );
@@ -246,7 +246,7 @@ class _SellerOrderDetailScreenState extends State<SellerOrderDetailScreen> {
         },
       ),
     );
-    var acceptOrderUrl = Uri.http(
+    var acceptOrderUrl = Uri.https(
       authority,
       'api/common/updateOrderDetails',
     );
@@ -308,7 +308,7 @@ class _SellerOrderDetailScreenState extends State<SellerOrderDetailScreen> {
   }
 
   void markAsCompleteActiveOrder(BuildContext context) {
-    var markAsCompleteUrl = Uri.http(
+    var markAsCompleteUrl = Uri.https(
       authority,
       'api/common/updateOrderDetails',
     );
@@ -390,7 +390,7 @@ class _SellerOrderDetailScreenState extends State<SellerOrderDetailScreen> {
   }
 
   void markAsCompleteFlaggedOrder(BuildContext context) {
-    var markAsCompleteUrl = Uri.http(
+    var markAsCompleteUrl = Uri.https(
       authority,
       'api/common/updateOrderDetails',
     );
@@ -479,7 +479,7 @@ class _SellerOrderDetailScreenState extends State<SellerOrderDetailScreen> {
   @override
   void initState() {
     super.initState();
-    orderDetailsUrl = Uri.http(authority, 'api/farmer/getOrderDetails', {
+    orderDetailsUrl = Uri.https(authority, 'api/farmer/getOrderDetails', {
       "id": widget.orderId,
     });
     getOrderDetails();

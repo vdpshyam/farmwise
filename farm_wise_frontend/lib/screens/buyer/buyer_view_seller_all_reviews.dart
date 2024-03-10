@@ -102,7 +102,7 @@ class _BVSellerAllReviewsScreenState extends State<BVSellerAllReviewsScreen> {
   @override
   void initState() {
     super.initState();
-    getAllReviewsUrl = Uri.http(
+    getAllReviewsUrl = Uri.https(
       authority,
       "api/common/getUserReviewByLimit",
       {

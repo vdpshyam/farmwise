@@ -195,7 +195,7 @@ class _SellerAddItemScreenState extends State<SellerAddItemScreen> {
   void initState() {
     super.initState();
 
-    addProductUrl = Uri.http(
+    addProductUrl = Uri.https(
       authority,
       "api/farmer/addproduct",
     );

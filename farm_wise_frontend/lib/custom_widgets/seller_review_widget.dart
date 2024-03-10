@@ -144,7 +144,7 @@ class _SellerReviewWidgetState extends State<SellerReviewWidget> {
           children: [
             TextButton(
               onPressed: () {
-                var userReviewReplyUrl = Uri.http(
+                var userReviewReplyUrl = Uri.https(
                   authority,
                   'api/farmer/replyToUserReview',
                 );

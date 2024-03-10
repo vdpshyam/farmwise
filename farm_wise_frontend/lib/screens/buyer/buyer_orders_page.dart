@@ -127,13 +127,13 @@ class _BuyerOrdersPageState extends State<BuyerOrdersPage> {
   @override
   void initState() {
     super.initState();
-    // activeOrdersUrl = Uri.http(authority, 'api/common/getActiveOrders', {
+    // activeOrdersUrl = Uri.https(authority, 'api/common/getActiveOrders', {
     //   "id": loggedInUserDetails.userId,
     // });
-    // pendingOrdersUrl = Uri.http(authority, 'api/common/getPendingOrders', {
+    // pendingOrdersUrl = Uri.https(authority, 'api/common/getPendingOrders', {
     //   "id": loggedInUserDetails.userId,
     // });
-    // flaggedOrdersUrl = Uri.http(authority, 'api/common/getFlaggedOrders', {
+    // flaggedOrdersUrl = Uri.https(authority, 'api/common/getFlaggedOrders', {
     //   "id": loggedInUserDetails.userId,
     // });
     // activeOrdersUrlResp = {};

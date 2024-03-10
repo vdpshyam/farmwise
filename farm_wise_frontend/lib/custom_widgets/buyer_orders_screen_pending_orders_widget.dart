@@ -52,7 +52,7 @@ class BuyerOrderScreenPendingOrderWidget extends StatelessWidget {
                       return const LoadingScreen();
                     }));
                 var rejectOrderUrl =
-                    Uri.http(authority, 'api/common/rejectOrder', {
+                    Uri.https(authority, 'api/common/rejectOrder', {
                   "orderId": order.orderId,
                 });
                 http.get(
@@ -119,7 +119,7 @@ class BuyerOrderScreenPendingOrderWidget extends StatelessWidget {
   //       pageBuilder: (BuildContext context, _, __) {
   //         return const LoadingScreen();
   //       }));
-  //   var acceptOrderUrl = Uri.http(
+  //   var acceptOrderUrl = Uri.https(
   //     authority,
   //     'api/common/updateOrderDetails',
   //   );
@@ -174,7 +174,7 @@ class BuyerOrderScreenPendingOrderWidget extends StatelessWidget {
   // }
 
   // void markAsComplete(BuildContext context) {
-  //   var markAsCompleteUrl = Uri.http(
+  //   var markAsCompleteUrl = Uri.https(
   //     authority,
   //     'api/common/updateOrderDetails',
   //   );

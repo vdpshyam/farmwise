@@ -128,7 +128,7 @@ class _UserPublicProfileScreenState extends State<UserPublicProfileScreen> {
 
     //For getting listed products
     if (userType == "Farmer") {
-      var getSellerListedProductsLimitUrl = Uri.http(
+      var getSellerListedProductsLimitUrl = Uri.https(
         authority,
         "api/farmer/getProductsLimit",
         {
@@ -181,7 +181,7 @@ class _UserPublicProfileScreenState extends State<UserPublicProfileScreen> {
     }
 
     //For getting reviews
-    var getUserReviewsByLimitUrl = Uri.http(
+    var getUserReviewsByLimitUrl = Uri.https(
       authority,
       "api/common/getUserReviewByLimit",
       {
@@ -253,12 +253,12 @@ class _UserPublicProfileScreenState extends State<UserPublicProfileScreen> {
     });
     Uri checkIfUserDealClosed;
     if (loggedInUserDetails.userType == 'Wholesaler') {
-      checkIfUserDealClosed = Uri.http(
+      checkIfUserDealClosed = Uri.https(
           authority,
           'api/common/checkIfDealClosed',
           {'sellerId': userId, 'buyerId': loggedInUserDetails.userId});
     } else {
-      checkIfUserDealClosed = Uri.http(
+      checkIfUserDealClosed = Uri.https(
           authority,
           'api/common/checkIfDealClosed',
           {'buyerId': userId, 'sellerId': loggedInUserDetails.userId});
@@ -345,7 +345,7 @@ class _UserPublicProfileScreenState extends State<UserPublicProfileScreen> {
                                 onPressed: () {
                                   if (_loggedInUserGiveReviewController.text !=
                                       '') {
-                                    var postUserReviewUrl = Uri.http(
+                                    var postUserReviewUrl = Uri.https(
                                       authority,
                                       'api/common/postUserReview',
                                     );
@@ -505,7 +505,7 @@ class _UserPublicProfileScreenState extends State<UserPublicProfileScreen> {
   @override
   void initState() {
     super.initState();
-    getUserDetailsUrl = Uri.http(
+    getUserDetailsUrl = Uri.https(
       authority,
       'api/common/getUserDetails',
       {"id": widget.userId},

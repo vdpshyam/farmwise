@@ -53,7 +53,7 @@ class _BuyerFilterByPricePageState extends State<BuyerFilterByPricePage> {
     debugPrint("minprice : $minPrice");
     debugPrint("maxPrice : $maxPrice");
     debugPrint("_currentRangeValues : $_currentRangeValues");
-    // getProductPricesUrl = Uri.http(
+    // getProductPricesUrl = Uri.https(
     //   authority,
     //   'api/common/getProductPriceList',
     //   {"searchTerm": widget.searchTerm},

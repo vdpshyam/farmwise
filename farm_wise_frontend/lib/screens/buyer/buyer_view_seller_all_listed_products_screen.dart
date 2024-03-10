@@ -91,7 +91,7 @@ class _BVSellerListedProductsScreenState
   @override
   void initState() {
     super.initState();
-    getProductsListUrl = Uri.http(
+    getProductsListUrl = Uri.https(
       authority,
       "api/farmer/getProductsLimit",
       {

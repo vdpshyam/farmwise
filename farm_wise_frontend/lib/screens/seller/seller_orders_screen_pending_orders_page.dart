@@ -74,7 +74,7 @@ class _SellerOrdersCrennPendingOrdersPageState
   @override
   void initState() {
     super.initState();
-    pendingOrdersUrl = Uri.http(authority, 'api/farmer/getPendingOrders', {
+    pendingOrdersUrl = Uri.https(authority, 'api/farmer/getPendingOrders', {
       "id": loggedInUserDetails.userId,
     });
 

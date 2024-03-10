@@ -72,7 +72,7 @@ class _BuyerReviewsScreenPostedByYouPageState
   @override
   void initState() {
     super.initState();
-    postedUserReviewUrl = Uri.http(
+    postedUserReviewUrl = Uri.https(
       authority,
       'api/common/getPostedUserReview',
       {

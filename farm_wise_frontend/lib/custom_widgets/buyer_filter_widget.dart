@@ -239,22 +239,22 @@ class _BuyerFilterWidgetState extends State<BuyerFilterWidget> {
   void initState() {
     super.initState();
     locationsList.clear();
-    getProductLocationsUrl = Uri.http(
+    getProductLocationsUrl = Uri.https(
       authority,
       'api/common/getProductLocationList',
       {"searchTerm": widget.searchTerm},
     );
-    getProductProducedDatesUrl = Uri.http(
+    getProductProducedDatesUrl = Uri.https(
       authority,
       'api/common/getProductProducedDatesList',
       {"searchTerm": widget.searchTerm},
     );
-    getProductAvailableDatesUrl = Uri.http(
+    getProductAvailableDatesUrl = Uri.https(
       authority,
       'api/common/getProductAvailableDatesList',
       {"searchTerm": widget.searchTerm},
     );
-    getProductPriceRangeUrl = Uri.http(
+    getProductPriceRangeUrl = Uri.https(
       authority,
       'api/common/getProductPriceList',
       {"searchTerm": widget.searchTerm},

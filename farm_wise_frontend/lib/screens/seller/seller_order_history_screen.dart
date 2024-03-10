@@ -88,7 +88,7 @@ class _SellerOrderHistoryScreenState extends State<SellerOrderHistoryScreen> {
   @override
   void initState() {
     super.initState();
-    orderHistoryUrl = Uri.http(authority, 'api/farmer/getOrdersHistory', {
+    orderHistoryUrl = Uri.https(authority, 'api/farmer/getOrdersHistory', {
       "id": loggedInUserDetails.userId,
     });
     orderDetails = [];

@@ -56,7 +56,7 @@ class _BuyerProfileSettingsScreenState
   File? image;
 
   void getUserDetails() {
-    var userDetailsUrl = Uri.http(authority, 'api/common/getUserDetails', {
+    var userDetailsUrl = Uri.https(authority, 'api/common/getUserDetails', {
       "id": loggedInUserDetails.userId,
     });
 
@@ -258,7 +258,7 @@ class _BuyerProfileSettingsScreenState
 
     isUserDataUpdated = false;
 
-    updateUserDetailsUrl = Uri.http(authority, 'api/common/updateUserDetails');
+    updateUserDetailsUrl = Uri.https(authority, 'api/common/updateUserDetails');
     anyDataChanged = false;
     isImageDataChanged = false;
 
@@ -574,7 +574,7 @@ class _BuyerProfileSettingsScreenState
                                     readOnly: true,
                                     onTap: () {
                                       List<StatesModel> statesList = [];
-                                      var getStatesListUrl = Uri.http(
+                                      var getStatesListUrl = Uri.https(
                                         authority,
                                         'api/common/stateslist',
                                       );
@@ -721,7 +721,7 @@ class _BuyerProfileSettingsScreenState
                                     readOnly: true,
                                     onTap: () {
                                       List<CityModel> cityList = [];
-                                      var getCityListUrl = Uri.http(
+                                      var getCityListUrl = Uri.https(
                                           authority,
                                           'api/common/citylistbystate',
                                           {"states": selectedState.name});

@@ -24,7 +24,7 @@ class _BuyerFavoritesPageState extends State<BuyerFavoritesPage> {
   void getFavoriteProductDetails() {
     favoriteProductsTiles.clear();
     favoriteProductsDetailsUrl =
-        Uri.http(authority, 'api/common/getFavoriteProducts', {
+        Uri.https(authority, 'api/common/getFavoriteProducts', {
       "buyerId": loggedInUserDetails.userId,
     });
 
@@ -72,7 +72,7 @@ class _BuyerFavoritesPageState extends State<BuyerFavoritesPage> {
     // if (loggedInUserDetails.favoriteProducts.isNotEmpty) {
     //   for (int i = 0; i < loggedInUserDetails.favoriteProducts.length; i++) {
     //     favoriteProductsDetailsUrl =
-    //         Uri.http(authority, 'api/common/getProductDetails', {
+    //         Uri.https(authority, 'api/common/getProductDetails', {
     //       "id": loggedInUserDetails.favoriteProducts[i],
     //     });
     //     http.get(

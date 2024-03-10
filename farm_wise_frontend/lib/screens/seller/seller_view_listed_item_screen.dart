@@ -262,7 +262,7 @@ class _SellerViewListedItemScreenState
                   ),
                 ),
                 onPressed: () {
-                  var productDeleteUrl = Uri.http(
+                  var productDeleteUrl = Uri.https(
                     authority,
                     'api/farmer/deleteproduct',
                   );
@@ -375,16 +375,16 @@ class _SellerViewListedItemScreenState
   @override
   void initState() {
     super.initState();
-    getProductDetailsUrl = Uri.http(
+    getProductDetailsUrl = Uri.https(
       authority,
       "api/farmer/getProductDetails",
       {
         "productId": widget.productId,
       },
     );
-    productBidDetailUrl = Uri.http(authority, "api/common/getProductBids",
+    productBidDetailUrl = Uri.https(authority, "api/common/getProductBids",
         {"productId": widget.productId});
-    productUpdateUrl = Uri.http(
+    productUpdateUrl = Uri.https(
       authority,
       'api/farmer/updateproduct',
     );

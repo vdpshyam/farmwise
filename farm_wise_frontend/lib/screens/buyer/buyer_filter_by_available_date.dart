@@ -77,7 +77,7 @@ class _BuyerFilterByAvailableFromDatePageState
   @override
   void initState() {
     super.initState();
-    // getProductAvailableDatesUrl = Uri.http(
+    // getProductAvailableDatesUrl = Uri.https(
     //   authority,
     //   'api/common/getProductAvailableDatesList',
     //   {"searchTerm": widget.searchTerm},

@@ -22,7 +22,7 @@ class SellerListedItemsPage extends StatefulWidget {
 }
 
 class _SellerListedItemsPageState extends State<SellerListedItemsPage> {
-  final Uri getAllProductsUrl = Uri.http(
+  final Uri getAllProductsUrl = Uri.https(
     authority,
     'api/farmer/getListedItems',
     {
@@ -50,7 +50,7 @@ class _SellerListedItemsPageState extends State<SellerListedItemsPage> {
                 i++) {
               var openOrders = 0;
               //get open orders
-              var getOenOrdersUrl = Uri.http(
+              var getOenOrdersUrl = Uri.https(
                   authority, 'api/farmer/getOpenOrders', {
                 "productId": getAllProductsResp["listedProducts"][i]["_id"]
               });

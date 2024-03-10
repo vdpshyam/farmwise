@@ -137,7 +137,7 @@ class _BuyerReviewWidgetState extends State<BuyerReviewWidget> {
           children: [
             TextButton(
               onPressed: () {
-                var userReviewReplyUrl = Uri.http(
+                var userReviewReplyUrl = Uri.https(
                   authority,
                   'api/common/replyToUserReview',
                 );
@@ -181,7 +181,7 @@ class _BuyerReviewWidgetState extends State<BuyerReviewWidget> {
                     ScaffoldMessenger.of(context).showSnackBar(snackBar);
                   }
                 });
-                // var userReviewDeleteUrl = Uri.http(
+                // var userReviewDeleteUrl = Uri.https(
                 //   authority,
                 //   'api/common/deleteUserReview',
                 // );

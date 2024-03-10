@@ -28,7 +28,7 @@ class _BuyerPasswordResetScreenState extends State<BuyerPasswordResetScreen> {
   void initState() {
     super.initState();
 
-    updatePasswordUrl = Uri.http(
+    updatePasswordUrl = Uri.https(
       authority,
       'api/common/updateUserPassword',
     );

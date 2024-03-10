@@ -75,7 +75,7 @@ class _BuyerOrdersScreenPendingOrdersPageState
   @override
   void initState() {
     super.initState();
-    pendingOrdersUrl = Uri.http(authority, 'api/common/getPendingOrders', {
+    pendingOrdersUrl = Uri.https(authority, 'api/common/getPendingOrders', {
       "id": loggedInUserDetails.userId,
     });
     getPendingOrders();
