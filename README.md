@@ -75,6 +75,7 @@ npm install
 
         - TOKEN_SECRET : A string for JWT verification
         - MONGOURL : Your mongoDB connection string
+        - PORT : 3001
 
 
 8. Start the development server:
