@@ -75,7 +75,7 @@ class _BuyerOrdersScreenActiveOrdersPageState
   @override
   void initState() {
     super.initState();
-    activeOrdersUrl = Uri.https(authority, 'api/common/getActiveOrders', {
+    activeOrdersUrl = Uri.http(authority, 'api/common/getActiveOrders', {
       "id": loggedInUserDetails.userId,
     });
     getActiveOrders();

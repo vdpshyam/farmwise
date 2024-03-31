@@ -23,7 +23,7 @@ class _BuyerProductMiniDetailTileWidgetState
   late Uri toggleFavoritesUrl;
 
   void toggleFavorites() {
-    toggleFavoritesUrl = Uri.https(
+    toggleFavoritesUrl = Uri.http(
       authority,
       "api/common/toggleFavorites",
     );

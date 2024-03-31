@@ -337,7 +337,7 @@ class _SellerEditItemScreenState extends State<SellerEditItemScreen> {
   void initState() {
     super.initState();
 
-    getProductDetailsUrl = Uri.https(
+    getProductDetailsUrl = Uri.http(
       authority,
       "api/farmer/getProductDetails",
       {
@@ -345,7 +345,7 @@ class _SellerEditItemScreenState extends State<SellerEditItemScreen> {
       },
     );
 
-    productUpdateUrl = Uri.https(
+    productUpdateUrl = Uri.http(
       authority,
       'api/farmer/updateproduct',
     );

@@ -58,7 +58,7 @@ class _BuyerSearchPageState extends State<BuyerSearchPage> {
   }
 
   void getSearchResults(value) {
-    productSearchUrl = Uri.https(
+    productSearchUrl = Uri.http(
       authority,
       'api/common/getSearchResults',
       {
@@ -124,7 +124,7 @@ class _BuyerSearchPageState extends State<BuyerSearchPage> {
       isLoading = true;
     });
 
-    var filetrProductSearchUrl = Uri.https(
+    var filetrProductSearchUrl = Uri.http(
       authority,
       'api/common/getSearchResultsByFilters',
       {
@@ -191,7 +191,7 @@ class _BuyerSearchPageState extends State<BuyerSearchPage> {
     //   isLoading = true;
     // });
 
-    var sortProductSearchUrl = Uri.https(
+    var sortProductSearchUrl = Uri.http(
       authority,
       'api/common/getSearchResultsBySort',
       {
@@ -234,7 +234,7 @@ class _BuyerSearchPageState extends State<BuyerSearchPage> {
   @override
   void initState() {
     super.initState();
-    productSearchUrl = Uri.https(
+    productSearchUrl = Uri.http(
       authority,
       'api/common/getSearchResults',
       {
@@ -242,7 +242,7 @@ class _BuyerSearchPageState extends State<BuyerSearchPage> {
         "productlimit": "10",
       },
     );
-    productNamesUrl = Uri.https(
+    productNamesUrl = Uri.http(
       authority,
       'api/common/getProductsName',
     );

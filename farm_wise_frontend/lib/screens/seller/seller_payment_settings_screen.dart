@@ -27,7 +27,7 @@ class _SellerPaymentSettingsScreenState
   DateTime lastSubscribedOn = DateTime.now();
 
   void getSubscriptionDetails() {
-    var getSubscriptionDetailsUrl = Uri.https(
+    var getSubscriptionDetailsUrl = Uri.http(
       authority,
       'api/payment/getSubscriptionDetails',
       {
@@ -87,7 +87,7 @@ class _SellerPaymentSettingsScreenState
         },
       ),
     );
-    var orderUrl = Uri.https(authority, 'api/payment/order');
+    var orderUrl = Uri.http(authority, 'api/payment/order');
     http.get(orderUrl, headers: {'Authorization': loggedInUserAuthToken,'Content-Type': 'application/json'}).then(
         (response) {
       debugPrint("Status code : ${response.statusCode}");

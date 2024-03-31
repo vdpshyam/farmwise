@@ -26,7 +26,7 @@ class _SellerOrderScreenActiveOrderWidgetState
     extends State<SellerOrderScreenActiveOrderWidget> {
   // void rejectOrder(BuildContext context) {
   void markAsComplete(BuildContext context) {
-    var markAsCompleteUrl = Uri.https(
+    var markAsCompleteUrl = Uri.http(
       authority,
       'api/common/updateOrderDetails',
     );

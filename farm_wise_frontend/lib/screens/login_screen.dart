@@ -29,12 +29,12 @@ class _LoginScreenState extends State<LoginScreen> {
 
   final _formKey = GlobalKey<FormState>();
 
-  final Uri authUrl = Uri.https(
+  final Uri authUrl = Uri.http(
     authority,
     'api/common/auth',
   );
 
-  final Uri getUserDetailsUrl = Uri.https(
+  final Uri getUserDetailsUrl = Uri.http(
     authority,
     'api/common/getUserDetails',
   );
@@ -70,7 +70,7 @@ class _LoginScreenState extends State<LoginScreen> {
               pref.setString("userType", loginAuthResp["resdata"]["userType"]);
               pref.setString("userName", loginAuthResp["resdata"]["userName"]);
               var authToken = loginAuthResp["token"];
-              final Uri getUserDetailsUrl = Uri.https(
+              final Uri getUserDetailsUrl = Uri.http(
                 authority,
                 'api/common/getUserDetails',
                 {"id": loginAuthResp['userId']},
@@ -224,7 +224,7 @@ class _LoginScreenState extends State<LoginScreen> {
   // }
 
   // void getUserDetails(userId) async {
-  //   final Uri getUserDetailsUrl = Uri.https(
+  //   final Uri getUserDetailsUrl = Uri.http(
   //     authority,
   //     'api/common/getUserDetails',
   //     {"id": userId},

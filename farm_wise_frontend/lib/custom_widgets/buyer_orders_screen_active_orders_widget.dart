@@ -34,7 +34,7 @@ class _BuyerOrderScreenActiveOrderWidgetState
         pageBuilder: (BuildContext context, _, __) {
           return const LoadingScreen();
         }));
-    var markAsCompleteUrl = Uri.https(
+    var markAsCompleteUrl = Uri.http(
       authority,
       'api/common/updateOrderDetails',
     );

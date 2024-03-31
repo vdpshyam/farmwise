@@ -60,7 +60,7 @@ class _BuyerPlaceOrderScreenState extends State<BuyerPlaceOrderScreen> {
             int.parse(_buyerNoOfLotsCotroller.text) *
             widget.quantityPerLot)
         .toString());
-    createOrderUrl = Uri.https(authority, 'api/common/createOrder');
+    createOrderUrl = Uri.http(authority, 'api/common/createOrder');
   }
 
   @override

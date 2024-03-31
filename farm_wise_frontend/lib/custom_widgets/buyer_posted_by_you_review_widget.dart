@@ -152,7 +152,7 @@ class _BuyerPostedByYouReviewWidgetState
           children: [
             TextButton(
               onPressed: () {
-                var userReviewReplyUrl = Uri.https(
+                var userReviewReplyUrl = Uri.http(
                   authority,
                   'api/common/deleteUserReview',
                 );

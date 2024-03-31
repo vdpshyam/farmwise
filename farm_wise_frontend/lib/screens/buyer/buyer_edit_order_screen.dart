@@ -109,7 +109,7 @@ class _BuyerEditOrderScreenState extends State<BuyerEditOrderScreen> {
     super.initState();
     _buyerQuotePriceCotroller = TextEditingController();
     _buyerNoOfLotsCotroller = TextEditingController();
-    getOrderDetailsUrl = Uri.https(
+    getOrderDetailsUrl = Uri.http(
       authority,
       'api/common/getOrderDetails',
       {"id": widget.orderId},
@@ -659,7 +659,7 @@ class _BuyerEditOrderScreenState extends State<BuyerEditOrderScreen> {
                                 pageBuilder: (BuildContext context, _, __) {
                                   return const LoadingScreen();
                                 }));
-                            var updateOrderDetailsUrl = Uri.https(
+                            var updateOrderDetailsUrl = Uri.http(
                               authority,
                               'api/common/updateOrderDetails',
                             );

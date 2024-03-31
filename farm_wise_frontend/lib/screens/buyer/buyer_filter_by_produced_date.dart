@@ -85,7 +85,7 @@ class _BuyerFilterByProducedDatePageState
   @override
   void initState() {
     super.initState();
-    // getProductProducedDatesUrl = Uri.https(
+    // getProductProducedDatesUrl = Uri.http(
     //   authority,
     //   'api/common/getProductProducedDatesList',
     //   {"searchTerm": widget.searchTerm},

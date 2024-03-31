@@ -156,7 +156,7 @@ class _BuyerOrderDetailScreenState extends State<BuyerOrderDetailScreen> {
                     pageBuilder: (BuildContext context, _, __) {
                       return const LoadingScreen();
                     }));
-                var rejectOrderUrl = Uri.https(
+                var rejectOrderUrl = Uri.http(
                   authority,
                   'api/common/rejectOrder',
                 );
@@ -232,7 +232,7 @@ class _BuyerOrderDetailScreenState extends State<BuyerOrderDetailScreen> {
         pageBuilder: (BuildContext context, _, __) {
           return const LoadingScreen();
         }));
-    var markAsCompleteUrl = Uri.https(
+    var markAsCompleteUrl = Uri.http(
       authority,
       'api/common/updateOrderDetails',
     );
@@ -320,7 +320,7 @@ class _BuyerOrderDetailScreenState extends State<BuyerOrderDetailScreen> {
         pageBuilder: (BuildContext context, _, __) {
           return const LoadingScreen();
         }));
-    var markAsCompleteUrl = Uri.https(
+    var markAsCompleteUrl = Uri.http(
       authority,
       'api/common/updateOrderDetails',
     );
@@ -382,7 +382,7 @@ class _BuyerOrderDetailScreenState extends State<BuyerOrderDetailScreen> {
   @override
   void initState() {
     super.initState();
-    orderDetailsUrl = Uri.https(authority, 'api/common/getOrderDetails', {
+    orderDetailsUrl = Uri.http(authority, 'api/common/getOrderDetails', {
       "id": widget.orderId,
     });
     getOrderDetails();

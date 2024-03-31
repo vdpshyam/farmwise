@@ -44,7 +44,7 @@ class _BuyerItemDetailScreenState extends State<BuyerItemDetailScreen> {
   }
 
   void toggleFavorites() {
-    toggleFavoritesUrl = Uri.https(
+    toggleFavoritesUrl = Uri.http(
       authority,
       "api/common/toggleFavorites",
     );
@@ -149,9 +149,9 @@ class _BuyerItemDetailScreenState extends State<BuyerItemDetailScreen> {
   void initState() {
     super.initState();
     isLoading = true;
-    productDetailUrl = Uri.https(
+    productDetailUrl = Uri.http(
         authority, "api/common/getProductDetails", {"id": widget.productId});
-    productBidDetailUrl = Uri.https(authority, "api/common/getProductBids",
+    productBidDetailUrl = Uri.http(authority, "api/common/getProductBids",
         {"productId": widget.productId});
     isFavorite =
         loggedInUserDetails.favoriteProducts.contains(widget.productId);
@@ -550,7 +550,7 @@ class _BuyerItemDetailScreenState extends State<BuyerItemDetailScreen> {
                             );
 
                             // bool isPLaceOrderEligible;
-                            // var checkIsPLaceOrderEligibleUrl = Uri.https(
+                            // var checkIsPLaceOrderEligibleUrl = Uri.http(
                             //     authority,
                             //     'api/payment/checkIsPLaceOrderEligible', {
                             //   "userId": loggedInUserDetails.userId,

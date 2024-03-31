@@ -235,7 +235,7 @@ class _SellerListscreenItemWidgetState
   }
 
   // void getOpenOrders() {
-  //   var getOenOrdersUrl = Uri.https(authority, 'api/farmer/getOpenOrders',
+  //   var getOenOrdersUrl = Uri.http(authority, 'api/farmer/getOpenOrders',
   //       {"productId": widget.product.productId});
   //   http.get(
   //     getOenOrdersUrl,
@@ -260,11 +260,11 @@ class _SellerListscreenItemWidgetState
   void initState() {
     super.initState();
     switchSelection = widget.listedItemsScreenProduct.availStatus;
-    productUpdateUrl = Uri.https(
+    productUpdateUrl = Uri.http(
       authority,
       'api/farmer/updateproduct',
     );
-    productDeleteUrl = Uri.https(
+    productDeleteUrl = Uri.http(
       authority,
       'api/farmer/deleteproduct',
     );

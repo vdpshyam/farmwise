@@ -59,7 +59,7 @@ class _SignupScreenState extends State<SignupScreen> {
   late FocusNode _userStateFocusNode;
   late FocusNode _userPincodeFocusNode;
 
-  final Uri signUpUrl = Uri.https(
+  final Uri signUpUrl = Uri.http(
     authority,
     'api/common/createuser',
   );
@@ -479,7 +479,7 @@ class _SignupScreenState extends State<SignupScreen> {
                                     readOnly: true,
                                     onTap: () {
                                       List<StatesModel> statesList = [];
-                                      var getStatesListUrl = Uri.https(
+                                      var getStatesListUrl = Uri.http(
                                         authority,
                                         'api/common/stateslist',
                                       );
@@ -625,7 +625,7 @@ class _SignupScreenState extends State<SignupScreen> {
                                     readOnly: true,
                                     onTap: () {
                                       List<CityModel> cityList = [];
-                                      var getCityListUrl = Uri.https(
+                                      var getCityListUrl = Uri.http(
                                           authority,
                                           'api/common/citylistbystate',
                                           {"states": selectedState.name});

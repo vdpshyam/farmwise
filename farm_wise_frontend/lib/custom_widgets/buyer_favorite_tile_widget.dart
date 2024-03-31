@@ -26,7 +26,7 @@ class _BuyerFavoriteTileWidgetState extends State<BuyerFavoriteTileWidget> {
 
   void toggleFavorites() {
     try {
-      toggleFavoritesUrl = Uri.https(
+      toggleFavoritesUrl = Uri.http(
         authority,
         "api/common/toggleFavorites",
       );

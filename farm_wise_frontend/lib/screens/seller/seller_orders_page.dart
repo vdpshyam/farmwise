@@ -164,13 +164,13 @@ class _SellerOrdersPageState extends State<SellerOrdersPage> {
   @override
   void initState() {
     super.initState();
-    // activeOrdersUrl = Uri.https(authority, 'api/farmer/getActiveOrders', {
+    // activeOrdersUrl = Uri.http(authority, 'api/farmer/getActiveOrders', {
     //   "id": loggedInUserDetails.userId,
     // });
-    // pendingOrdersUrl = Uri.https(authority, 'api/farmer/getPendingOrders', {
+    // pendingOrdersUrl = Uri.http(authority, 'api/farmer/getPendingOrders', {
     //   "id": loggedInUserDetails.userId,
     // });
-    // flaggedOrdersUrl = Uri.https(authority, 'api/farmer/getFlaggedOrders', {
+    // flaggedOrdersUrl = Uri.http(authority, 'api/farmer/getFlaggedOrders', {
     //   "id": loggedInUserDetails.userId,
     // });
     // activeOrdersUrlResp = {};

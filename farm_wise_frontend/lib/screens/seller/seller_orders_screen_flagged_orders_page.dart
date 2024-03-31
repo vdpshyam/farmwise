@@ -72,7 +72,7 @@ class _SellerOrderScreenFlaggedOrdersPageState
   @override
   void initState() {
     super.initState();
-    flaggedOrdersUrl = Uri.https(authority, 'api/farmer/getFlaggedOrders', {
+    flaggedOrdersUrl = Uri.http(authority, 'api/farmer/getFlaggedOrders', {
       "id": loggedInUserDetails.userId,
     });
     getFlaggedOrders();

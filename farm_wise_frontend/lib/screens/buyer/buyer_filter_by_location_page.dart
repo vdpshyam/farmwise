@@ -49,7 +49,7 @@ class _BuyerFilterByLocationPageState extends State<BuyerFilterByLocationPage> {
   void initState() {
     super.initState();
     // _selectedLocationList = widget.productsLocationsList;
-    // getProductLocationsUrl = Uri.https(
+    // getProductLocationsUrl = Uri.http(
     //   authority,
     //   'api/common/getProductLocationList',
     //   {"searchTerm": widget.searchTerm},

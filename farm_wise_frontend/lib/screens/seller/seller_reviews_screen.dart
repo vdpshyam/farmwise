@@ -80,14 +80,14 @@ class _SellerReviewsScreenState extends State<SellerReviewsScreen> {
   @override
   void initState() {
     super.initState();
-    // userReviewUrl = Uri.https(
+    // userReviewUrl = Uri.http(
     //   authority,
     //   'api/common/getUserReview',
     //   {
     //     "postedFor": loggedInUserDetails.userId,
     //   },
     // );
-    // postedUserReviewUrl = Uri.https(
+    // postedUserReviewUrl = Uri.http(
     //   authority,
     //   'api/common/getPostedUserReview',
     //   {
