@@ -1,7 +1,7 @@
 
 # FarmWise B2B E-commerce Mobile App
 
-FarmWise is a B2B E-commerce Mobile App is built using Flutter for the frontend and Node.js for the backend. This application is designed to facilitate business-to-business transactions specifically for agricultural products. It is built using Flutter for the frontend and Node.js for the backend.
+FarmWise is a B2B E-commerce Mobile App is built using Flutter for the frontend and Node.js for the backend. This application is designed to facilitate business-to-business transactions specifically for agricultural products.
 
 ## Features
 
